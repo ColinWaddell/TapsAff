@@ -23,5 +23,8 @@
     <br />
     <br />
     <p>by <a href='http://colinwaddell.com/'>colinwaddell.com</a></p>
+    <br />
+    <br />
+    <p>Sourcecode available on <a href='https://github.com/ColinWaddell/tapsaff'>GitHub</a></p>
   </div>
 </div>
