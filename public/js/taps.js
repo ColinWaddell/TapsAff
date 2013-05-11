@@ -14,4 +14,10 @@ $(document).ready(function(){
           });
       });
 
+    $("#more-info").click(
+      function(){
+        $("div#more-info > #more-info-link").hide();
+        $("div#more-info > .more-info-expand").fadeIn(100);
+      });
+
 });
