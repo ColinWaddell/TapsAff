@@ -5,5 +5,5 @@ function _clear() {
     setcookie(session_name(), '', time()-42000, '/');
   session_destroy();
   $data['body'][]="<h2>Sessions and Cookies Cleared!</h2>";
-  View::do_dump(VIEW_PATH.'layout.php',$data);
+  View::do_dump(VIEW_PATH.'page-layout.php',$data);
 }

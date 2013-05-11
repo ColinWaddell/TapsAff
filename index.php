@@ -32,7 +32,10 @@ session_start();
 //===============================================
 // Globals
 //===============================================
-$GLOBALS['sitename']='KISSMVC - Simple Example';
+$GLOBALS['sitename']='Glasgow, Taps-Aff or Taps-Oan?';
+$GLOBALS['json_local']=getcwd().'/taps.json';
+$GLOBALS['json_url']='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20location%3D%22UKXX0061%22&format=json';
+$GLOBALS['taps_temp'] = 63;
 
 //===============================================
 // Functions
@@ -43,7 +46,7 @@ function myUrl($url='',$fullurl=false) {
   return $s;
 }
 
-//===============================================
+//==============================================
 // Start the controller
 //===============================================
-$controller = new Controller(APP_PATH.'controllers/',WEB_FOLDER,'main','index');
+$controller = new Controller(APP_PATH.'controllers/',WEB_FOLDER,'taps','index');

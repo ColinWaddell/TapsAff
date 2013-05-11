@@ -21,5 +21,5 @@ eg.<br />
 <a href="/kissmvc_simple/welcome/Anonymous User 3">http://demo.kissmvc.com/kissmvc_simple/welcome/Anonymous User 3</a><br />
 <a href="/kissmvc_simple/welcome/?name=Anonymous%20User%204">http://demo.kissmvc.com/kissmvc_simple/welcome/?name=Anonymous%20User%204</a><br />
 </p>';
-  View::do_dump(VIEW_PATH.'layout.php',$data);
+  View::do_dump(VIEW_PATH.'page-layout.php',$data);
 }
