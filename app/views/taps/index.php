@@ -26,7 +26,7 @@
     <a href='<?php echo $GLOBALS['json_url'] ?>' target='_blank'>Weather results from Yahoo json feed for Glasgow</a>
     <br />
     <br />
-    <p>Current Temperature: <?php echo $status->temp_c; ?>&deg;C (<?php $status->temp_f; ?>&deg;F)</p>
+    <p>Current Temperature: <?php echo $status->temp_c; ?>&deg;C (<?php echo $status->temp_f; ?>&deg;F)</p>
     <br />
     <br />
     <p>Weather data valid from <?php echo $status->datetime ?> for <?php echo $status->lifespan ?></p>
