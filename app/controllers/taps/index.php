@@ -4,18 +4,17 @@ function retrieve_taps_status() {
 
   $json_local = json_decode( file_get_contents( $GLOBALS['json_local'] )); 
   $local_datetime = new DateTime($json_local->datetime);
-  $local_datetime->modify('+1 hour'); // This is the time the local copy is valid until
+  $local_datetime->modify($GLOBALS['json_lifespan']); // This is the time the local copy is valid until
   $current_datetime = new DateTime();
   
   if ( $current_datetime < $local_datetime )
   {
-    //json time is valid
-    return $json_local;
+      return $json_local;
 
   } else {
     //need to do new pull from web
     $json_web = json_decode( file_get_contents( $GLOBALS['json_url'] ));
-    
+
     $temp_f = 0;
     $temp_c = 0;
     if (isset( $json_web->query->results->channel->wind->chill ))
@@ -30,12 +29,15 @@ function retrieve_taps_status() {
           'temp_f'   => $temp_f,
           'temp_c'   => $temp_c,
           'taps'     => $status,
-          'datetime' => $current_datetime->format('Y-m-d H:i:s')
+          'datetime' => $current_datetime->format('Y-m-d H:i:s'),
+          'lifespan' => $GLOBALS['json_lifespan']
          );
 
     file_put_contents( $GLOBALS['json_local'],
                        json_encode( $json_local ));
 
+    // Need to return as an object rather than an array.
+    //return (object) array_map(__FUNCTION__, $json_local);
     return $json_local;
   }
 

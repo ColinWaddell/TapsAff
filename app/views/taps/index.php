@@ -3,13 +3,20 @@
 
   <p class="taps-message">
     <p class="taps-message">taps
+    <?php if (isset( $status->taps )): ?>
       <span id="dynamic-taps-message" class="taps-<?php echo $status->taps; ?>">
         <?php echo " ".$status->taps; ?>
       </span>
+    <?php else: ?>
+      <span id="dynamic-taps-message" class="taps-error">
+        error
+      </span>
+    <?php endif; ?>
     </p>
   </p>
 </div> <!-- taps-text-area -->
- 
+
+<?php if (isset( $status->taps )): ?>
 <div id="more-info">
   <a href="#" id="more-info-link">more info</a>
 
@@ -22,9 +29,14 @@
     <p>Current Temperature: <?php echo $status->temp_c; ?>&deg;C (<?php $status->temp_f; ?>&deg;F)</p>
     <br />
     <br />
+    <p>Weather data valid from <?php echo $status->datetime ?> for <?php echo $status->lifespan ?></p>
+    <br />
+    <br />
     <p>by <a href='http://colinwaddell.com/'>colinwaddell.com</a></p>
     <br />
     <br />
     <p>Sourcecode available on <a href='https://github.com/ColinWaddell/tapsaff'>GitHub</a></p>
   </div>
 </div>
+
+<?php endif; ?>
