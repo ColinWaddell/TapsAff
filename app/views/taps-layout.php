@@ -13,6 +13,7 @@
 <script src="public/js/taps.js"></script>
 <link href="http://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet" type="text/css">
 <link rel="stylesheet" id="taps-style"  href="public/css/taps.css" type="text/css" media="all" />
+<link rel="stylesheet" id="skeleton-framework"  href="public/css/skeleton.css" type="text/css" media="all" />
 
 <script type="text/javascript">
 
@@ -31,7 +32,7 @@ _gaq.push(["_trackPageview"]);
 </head>
 <body>
 
-  <div id="page-wrapper">
+  <div id="container">
 
     <?php
       if (isset($body) && is_array($body)):

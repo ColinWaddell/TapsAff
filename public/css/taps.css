@@ -8,21 +8,6 @@ body {
   font-size:2em;
 }
 
-#page-wrapper {
-  width:100%;
-}
-
-section {
-  width:600px;
-  padding-top:80px;
-  text-align:center;
-  margin:0 auto;
-}
-
-p {
-  color:#333;
-}
-
 .taps-message {
   font-size:4em;
   padding-top:20px;
