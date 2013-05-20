@@ -49,7 +49,6 @@ _gaq.push(["_trackPageview"]);
           endif
         ?>
         <!-- Main Content -->
-
     </div>
   </div> <!-- container -->
 
@@ -69,7 +68,7 @@ _gaq.push(["_trackPageview"]);
 
         </div>
       </div> <!-- container -->
-    </div>
+    </div> <!-- moreinfo -->
 </body>
 </html>
 
