@@ -55,8 +55,14 @@ span.taps-error { color:#333;  }
 
 .moreinfo > .container > .columns {
   margin: 20px 0;
+  padding: 5px;
 }
 
 .moreinfo > .container > .columns + .columns {
   border-left: 1px solid grey;
+}
+
+hr{
+    border:0;
+    border-bottom: 1px solid grey;
 }

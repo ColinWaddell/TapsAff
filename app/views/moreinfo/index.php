@@ -34,6 +34,8 @@
         </div>
     </div>
 
+    <hr />
+
     <div class="container nine">
         <div class="columns four alpha">
             <span class="info-title">
