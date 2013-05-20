@@ -3,7 +3,17 @@
     <h3 class="site-purpose">An automated service; keeping the Glasgow public informed.</h3>
 
     <div class="container nine">
+
         <div class="columns four alpha">
+            <span class="info-title">
+                Current Temperature
+            </span>
+            <span class="info-value">
+                <?php echo $status->temp_c; ?>&deg;C (<?php echo $status->temp_f; ?>&deg;F)
+            </span>
+        </div>
+
+        <div class="columns four">
             <span class="info-title">
                 Weather Feed
             </span>
@@ -13,15 +23,6 @@
                  YahooAPI Feed
                 </a>
             </span>        
-        </div>
-
-        <div class="columns four">
-            <span class="info-title">
-                Current Temperature
-            </span>
-            <span class="info-value">
-                <?php echo $status->temp_c; ?>&deg;C (<?php echo $status->temp_f; ?>&deg;F)
-            </span>
         </div>
 
         <div class="columns four omega">
