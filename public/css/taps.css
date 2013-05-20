@@ -53,4 +53,10 @@ span.taps-oan { color:#2A44F0; }
 
 span.taps-error { color:#333;  }
 
+.moreinfo > .container > .columns {
+  margin: 20px 0;
+}
 
+.moreinfo > .container > .columns + .columns {
+  border-left: 1px solid grey;
+}
