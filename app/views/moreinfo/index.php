@@ -46,7 +46,7 @@
                 Site Author
             </span>
             <span class="info-value">
-                <a href='http://colinwaddell.com/'>Colinwaddell.com</a>
+                <a href='http://colinwaddell.com/'>ColinWaddell.com</a>
             </span>
         </div>
 
