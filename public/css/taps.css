@@ -15,6 +15,7 @@ h1,h2,h3,h4,h5{
 
 a{
   text-decoration: none;
+  color: rgb(255, 189, 189);
 }
 
 a:hover {
@@ -36,7 +37,10 @@ a:hover {
 
 #moreinfo {
   font-size: 18px;
-  padding-top: 75px;
+  margin-top: 75px;
+  padding-top: 40px;
+  color: white;
+  background: black;
 }
 
 
@@ -78,5 +82,5 @@ h2.site-message{
 }
 
 h3.site-purpose{
-  padding-bottom: 60px;
+  padding-bottom: 30px;
 }
