@@ -65,11 +65,7 @@ span.info-value{
 .moreinfo > .container > .columns {
   margin: 20px 0;
   padding: 5px;
-  min-height: 235px;
-}
-
-.moreinfo > .container > .columns + .columns {
-  border-left: 1px solid grey;
+  min-height: 60px;
 }
 
 hr{
