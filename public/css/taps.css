@@ -84,3 +84,11 @@ h2.site-message{
 h3.site-purpose{
   padding-bottom: 30px;
 }
+
+
+@media only screen and (max-width: 767px) and (min-width: 480px){
+  #moreinfo > .container > div > section > .container > .columns{
+    margin: 5px 0;              
+  }
+
+}
