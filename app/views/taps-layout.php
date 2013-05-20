@@ -33,18 +33,18 @@ _gaq.push(["_trackPageview"]);
 <body>
 
   <div class="container">
-
-    <?php
-      if (isset($body) && is_array($body)):
-        foreach ($body as $entry): ?>
-          <section>
-            <?php echo "$entry\n"; ?>
-          </section>
-        <?php endforeach; 
-      endif;
-    ?>
-
-  </div> <!-- page-wrapper -->
+    <div class="columns offset-by-two twelve">
+        <?php
+          if (isset($body) && is_array($body)):
+            foreach ($body as $entry): ?>
+              <section>
+                <?php echo "$entry\n"; ?>
+              </section>
+            <?php endforeach; 
+          endif;
+        ?>
+    </div>
+  </div> <!-- container -->
 
 </body>
 </html>
