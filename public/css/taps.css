@@ -18,7 +18,7 @@ a{
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration: underlined;
 }
 
 #taps-text-area{
@@ -84,7 +84,7 @@ hr{
 }
 
 h2.site-message{
-  padding-top:35px;
+  padding-top:60px;
 }
 
 h3.site-purpose{
