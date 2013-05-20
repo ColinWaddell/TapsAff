@@ -53,6 +53,15 @@ span.taps-oan { color:#2A44F0; }
 
 span.taps-error { color:#333;  }
 
+
+span.info-title{
+    display:block;
+}
+
+span.info-value{
+    display: block;
+}
+
 .moreinfo > .container > .columns {
   margin: 20px 0;
   padding: 5px;
