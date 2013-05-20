@@ -12,7 +12,7 @@
       </span>
     <?php endif; ?>
     </p>
-    <?php if (($status->temp_f >= $GLOBALS['taps_temp'] - 5) && ($status->temp_f =< $GLOBALS['taps_temp'])): ?>
+    <?php if (($status->temp_f >= $GLOBALS['taps_temp'] - 5) && ($status->temp_f <= $GLOBALS['taps_temp'])): ?>
       <p>...but it's close!</p>
       <br />
     <?php endif; ?>
