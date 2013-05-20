@@ -5,12 +5,12 @@
     <div class="container nine">
         <div class="columns four alpha">
             <span class="info-title">
-                Weather results source
+                Weather Feed
             </span>
             <span class="info-value">
                 <a href='<?php echo $GLOBALS['json_url'] ?>' 
                    target='_blank'>
-                 from Yahoo json feed for Glasgow
+                 Yahoo json feed for Glasgow
                 </a>
             </span>        
         </div>
@@ -26,10 +26,10 @@
 
         <div class="columns four omega">
             <span class="info-title">
-                Weather data valid from
+                Last update
             </span>
             <span class="info-value">
-                <?php echo $status->datetime ?> for <?php echo $status->lifespan ?>
+                <?php echo $status->datetime ?> <br /> Valid for <?php echo $status->lifespan ?>
             </span>
         </div>
     </div>
@@ -39,7 +39,7 @@
     <div class="container nine">
         <div class="columns four alpha">
             <span class="info-title">
-                Site design by
+                Site Author
             </span>
             <span class="info-value">
                 <a href='http://colinwaddell.com/'>colinwaddell.com</a>
@@ -48,7 +48,7 @@
 
         <div class="columns four">
             <span class="info-title">
-                Sourcecode available from
+                Sourcecode
             </span>
             <span class="info-value">
                 <a href='https://github.com/ColinWaddell/tapsaff'>GitHub</a>
