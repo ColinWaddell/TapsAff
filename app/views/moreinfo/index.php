@@ -19,7 +19,7 @@
                 Last Updated
             </span>
             <span class="info-value">
-                <?php echo $status->datetime ?> <br /> Valid for <?php echo $status->lifespan ?>
+                <?php echo $status->datetime ?> <br /> Valid for <?php echo trim($status->lifespan,'+') ?>
             </span>
         </div>
 
