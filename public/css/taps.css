@@ -34,19 +34,9 @@ a:hover {
   color:#111;
 }
 
-section#moreinfo {
+#moreinfo {
   font-size: 18px;
   padding-top: 75px;
-}
-
-
-section#more-info a {
-  color:#666;
-  text-decoration:none;
-}
-
-section#more-info a:hover {
-  text-decoration:underline;
 }
 
 
