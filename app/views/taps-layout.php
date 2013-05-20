@@ -49,7 +49,7 @@ _gaq.push(["_trackPageview"]);
         <?php
           if (isset($moreinfo) && is_array($moreinfo)):
             foreach ($moreinfo as $entry): ?>
-              <section>
+              <section class="moreinfo">
                 <?php echo "$entry\n"; ?>
               </section>
             <?php endforeach; 
