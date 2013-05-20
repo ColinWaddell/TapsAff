@@ -13,6 +13,14 @@ h1,h2,h3,h4,h5{
   font-weight: 800;
 }
 
+h2.site-message{
+  padding-top:60px;
+}
+
+h3.site-purpose{
+  padding-bottom: 30px;
+}
+
 a{
   text-decoration: none;
   color: rgb(255, 189, 189);
@@ -35,6 +43,12 @@ a:hover {
   color:#111;
 }
 
+span.taps-aff { color:#FF5454; }
+
+span.taps-oan { color:#2A44F0; }
+
+span.taps-error { color:#333;  }
+
 #moreinfo {
   font-size: 18px;
   margin-top: 75px;
@@ -43,17 +57,11 @@ a:hover {
   background: #555;
 }
 
-
-div.fb-like {
-  width:135px;
-  margin:0 auto;
+#moreinfo > .container > div > section > .container > .columns {
+  margin: 20px 0;
+  padding: 5px;
+  min-height: 60px;
 }
-
-span.taps-aff { color:#FF5454; }
-
-span.taps-oan { color:#2A44F0; }
-
-span.taps-error { color:#333;  }
 
 
 span.info-title{
@@ -64,25 +72,6 @@ span.info-title{
 
 span.info-value{
     display: block;
-}
-
-#moreinfo > .container > div > section > .container > .columns {
-  margin: 20px 0;
-  padding: 5px;
-  min-height: 60px;
-}
-
-hr{
-    border:0;
-    border-bottom: 1px solid grey;
-}
-
-h2.site-message{
-  padding-top:60px;
-}
-
-h3.site-purpose{
-  padding-bottom: 30px;
 }
 
 
