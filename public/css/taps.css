@@ -91,4 +91,12 @@ h3.site-purpose{
     margin: 5px 0;              
   }
 
+  h2.site-message {
+    padding-top: 20px;
+  }
+
+  .taps-message {
+    line-height: 1.1em;
+  }
+
 }
