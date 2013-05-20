@@ -32,7 +32,7 @@ _gaq.push(["_trackPageview"]);
 </head>
 <body>
 
-  <div id="container">
+  <div class="container">
 
     <?php
       if (isset($body) && is_array($body)):
