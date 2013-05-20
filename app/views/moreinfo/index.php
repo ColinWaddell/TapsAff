@@ -31,7 +31,7 @@
         <div class="columns four omega">
             <?php
               if (isset($facebook) && is_array($facebook)):
-                foreach ($moreinfo as $entry): ?>
+                foreach ($facebook as $entry): ?>
                     <?php echo "$entry\n"; ?>
                 <?php endforeach; 
               endif;
