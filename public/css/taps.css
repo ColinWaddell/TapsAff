@@ -67,7 +67,6 @@ span.taps-error { color:#333;  }
   min-height: 60px;
 }
 
-
 span.info-title{
     display:block;
     font-weight:600;
@@ -77,7 +76,6 @@ span.info-title{
 span.info-value{
     display: block;
 }
-
 
 @media only screen and (max-width: 767px) and (min-width: 480px){
   #moreinfo > .container > div > section > .container > .columns{
