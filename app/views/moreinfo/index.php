@@ -1,6 +1,6 @@
 <?php if (isset( $status->taps )): ?>
 
-    <p>An automated service; keeping the Glasgow public informed.</p>
+    <h3>An automated service; keeping the Glasgow public informed.</h3>
 
     <div class="container nine">
         <div class="columns four alpha">

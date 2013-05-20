@@ -17,23 +17,22 @@ body {
   color:#111;
 }
 
-div#more-info {
-  font-size:.4em;
+section.moreinfo {
+  font-size: 18px;
+  font-weight: normal;
   padding-top:75px;
 }
 
-div#more-info a {
+
+section.more-info a {
   color:#666;
   text-decoration:none;
 }
 
-div#more-info a:hover {
+section.more-info a:hover {
   text-decoration:underline;
 }
 
-div#more-info > .more-info-expand {
-  display:none;
-}
 
 div.fb-like {
   width:135px;
@@ -46,6 +45,4 @@ span.taps-oan { color:#2A44F0; }
 
 span.taps-error { color:#333;  }
 
-section.moreinfo {
-  font-size: 18px;
-}
+
