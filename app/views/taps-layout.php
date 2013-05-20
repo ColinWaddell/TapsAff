@@ -11,7 +11,7 @@
 
 <script src="http://code.jquery.com/jquery-latest.js"></script>
 <script src="public/js/taps.js"></script>
-<link href="http://fonts.googleapis.com/css?family=Open+Sans:800" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,800' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" id="taps-style"  href="public/css/taps.css" type="text/css" media="all" />
 <link rel="stylesheet" id="skeleton-framework"  href="public/css/skeleton.css" type="text/css" media="all" />
 
