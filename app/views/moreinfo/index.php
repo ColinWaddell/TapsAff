@@ -13,19 +13,8 @@
             </span>
         </div>
 
-        <div class="columns four">
-            <span class="info-title">
-                Weather Feed
-            </span>
-            <span class="info-value">
-                <a href='<?php echo $GLOBALS['json_url'] ?>' 
-                   target='_blank'>
-                 YahooAPI Feed
-                </a>
-            </span>        
-        </div>
 
-        <div class="columns four omega">
+        <div class="columns four">
             <span class="info-title">
                 Last Updated
             </span>
@@ -33,6 +22,22 @@
                 <?php echo $status->datetime ?> <br /> Valid for <?php echo $status->lifespan ?>
             </span>
         </div>
+
+        <div class="columns four omega">
+            <span class="info-title">
+                Facebook
+            </span>
+            <span class="info-value">
+            <?php
+              if (isset($facebook) && is_array($facebook)):
+                foreach ($facebook as $entry): ?>
+                    <?php echo "$entry\n"; ?>
+                <?php endforeach; 
+              endif;
+            ?>
+            </span>
+        </div>
+
     </div>
 
     <div class="container nine">
@@ -56,18 +61,16 @@
 
         <div class="columns four omega">
             <span class="info-title">
-                Facebook
+                Weather Feed
             </span>
             <span class="info-value">
-            <?php
-              if (isset($facebook) && is_array($facebook)):
-                foreach ($facebook as $entry): ?>
-                    <?php echo "$entry\n"; ?>
-                <?php endforeach; 
-              endif;
-            ?>
-            </span>
+                <a href='<?php echo $GLOBALS['json_url'] ?>' 
+                   target='_blank'>
+                 YahooAPI Feed
+                </a>
+            </span>        
         </div>
+        
     </div>
 
 <?php endif; ?>
