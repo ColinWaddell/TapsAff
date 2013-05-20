@@ -10,7 +10,7 @@
             <span class="info-value">
                 <a href='<?php echo $GLOBALS['json_url'] ?>' 
                    target='_blank'>
-                 Yahoo json feed for Glasgow
+                 YahooAPI Feed
                 </a>
             </span>        
         </div>
@@ -26,7 +26,7 @@
 
         <div class="columns four omega">
             <span class="info-title">
-                Last update
+                Last Updated
             </span>
             <span class="info-value">
                 <?php echo $status->datetime ?> <br /> Valid for <?php echo $status->lifespan ?>
