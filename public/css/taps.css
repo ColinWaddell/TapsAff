@@ -6,12 +6,12 @@ body {
   font-size:2em;
   text-align: center;
   font-family:'Open Sans', serif;
-  font-weight:300
+  font-weight:300;
 }
 
 #taps-text-area{
   font-family:'Open Sans', serif;
-  font-weight:800;  
+  font-weight: 800;  
 }
 
 .taps-message {
@@ -25,7 +25,7 @@ body {
 section.moreinfo {
   font-size: 18px;
   font-weight: normal;
-  padding-top:75px;
+  padding-top: 75px;
 }
 
 
