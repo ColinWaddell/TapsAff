@@ -1,7 +1,6 @@
 <div id="taps-text-area">
   <h2 class="site-message">Glasgow, the weather is:</h2>
 
-  <p class="taps-message">
     <p class="taps-message">taps
     <?php if (isset( $status->taps )): ?>
       <span id="dynamic-taps-message" class="taps-<?php echo $status->taps; ?>">
@@ -17,7 +16,6 @@
       <p>...but it's getting close!</p>
       <br />
     <?php endif; ?>
-  </p>
 </div> <!-- taps-text-area -->
 
 
