@@ -4,31 +4,60 @@
 
     <div class="container nine">
         <div class="columns four alpha">
-            <a href='<?php echo $GLOBALS['json_url'] ?>' 
-               target='_blank'>
-                Weather results from Yahoo json feed for Glasgow
-            </a>
+            <span class="info-title">
+                Weather results source
+            </span>
+            <span class="info-value">
+                <a href='<?php echo $GLOBALS['json_url'] ?>' 
+                   target='_blank'>
+                 from Yahoo json feed for Glasgow
+                </a>
+            </span>        
         </div>
 
         <div class="columns four">
-            <p>Current Temperature: <?php echo $status->temp_c; ?>&deg;C (<?php echo $status->temp_f; ?>&deg;F)</p>
+            <span class="info-title">
+                Current Temperature
+            </span>
+            <span class="info-value">
+                <?php echo $status->temp_c; ?>&deg;C (<?php echo $status->temp_f; ?>&deg;F)
+            </span>
         </div>
 
         <div class="columns four omega">
-            <p>Weather data valid from <?php echo $status->datetime ?> for <?php echo $status->lifespan ?></p>
+            <span class="info-title">
+                Weather data valid from
+            </span>
+            <span class="info-value">
+                <?php echo $status->datetime ?> for <?php echo $status->lifespan ?>
+            </span>
         </div>
     </div>
 
     <div class="container nine">
         <div class="columns four alpha">
-            <p>by <a href='http://colinwaddell.com/'>colinwaddell.com</a></p>
+            <span class="info-title">
+                Site design by
+            </span>
+            <span class="info-value">
+                <a href='http://colinwaddell.com/'>colinwaddell.com</a>
+            </span>
         </div>
 
         <div class="columns four">
-            <p>Sourcecode available on <a href='https://github.com/ColinWaddell/tapsaff'>GitHub</a></p>
+            <span class="info-title">
+                Sourcecode available from
+            </span>
+            <span class="info-value">
+                <a href='https://github.com/ColinWaddell/tapsaff'>GitHub</a>
+            </span>
         </div>
 
         <div class="columns four omega">
+            <span class="info-title">
+                Facebook
+            </span>
+            <span class="info-value">
             <?php
               if (isset($facebook) && is_array($facebook)):
                 foreach ($facebook as $entry): ?>
@@ -36,6 +65,7 @@
                 <?php endforeach; 
               endif;
             ?>
+            </span>
         </div>
     </div>
 
