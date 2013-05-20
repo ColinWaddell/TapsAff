@@ -7,7 +7,7 @@
 
 <meta property="og:url" content="http://colinwaddell.com/tapsaff/"/> 
 <meta property="og:title" content="Glasgow, taps-aff or taps-oan?"/> 
-<meta property="og:image" content="http://colinwaddell.com/tapsaff/logo.png"/>
+<meta property="og:image" content="http://colinwaddell.com/tapsaff/public/img/logo.png"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
