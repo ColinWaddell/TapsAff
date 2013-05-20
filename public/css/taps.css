@@ -24,7 +24,6 @@ body {
 
 section.moreinfo {
   font-size: 18px;
-  font-weight: normal;
   padding-top: 75px;
 }
 
@@ -36,7 +35,7 @@ section.more-info a {
 
 section.more-info a:hover {
   text-decoration:underline;
-
+}
 
 
 div.fb-like {
