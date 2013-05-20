@@ -29,7 +29,13 @@
         </div>
 
         <div class="columns four omega">
-            Facebook
+            <?php
+              if (isset($facebook) && is_array($facebook)):
+                foreach ($moreinfo as $entry): ?>
+                    <?php echo "$entry\n"; ?>
+                <?php endforeach; 
+              endif;
+            ?>
         </div>
     </div>
 
