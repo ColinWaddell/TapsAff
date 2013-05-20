@@ -46,10 +46,16 @@ _gaq.push(["_trackPageview"]);
         ?>
         <!-- Main Content -->
 
+    </div>
+  </div> <!-- container -->
+
+  <div class="container" id="moreinfo">
+    <div class="columns offset-by-two twelve">
+
         <?php
           if (isset($moreinfo) && is_array($moreinfo)):
             foreach ($moreinfo as $entry): ?>
-              <section class="moreinfo">
+              <section>
                 <?php echo "$entry\n"; ?>
               </section>
             <?php endforeach; 
