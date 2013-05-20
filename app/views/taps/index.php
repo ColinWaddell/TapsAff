@@ -13,8 +13,7 @@
     <?php endif; ?>
     </p>
     <?php if (($status->temp_f >= $GLOBALS['taps_temp'] - 5) && ($status->temp_f <= $GLOBALS['taps_temp'])): ?>
-      <p>...but it's close!</p>
-      <br />
+      <p class="close">...but it's close!</p>
     <?php endif; ?>
 </div> <!-- taps-text-area -->
 
