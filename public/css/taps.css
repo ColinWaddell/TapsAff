@@ -9,8 +9,12 @@ body {
   font-weight:300;
 }
 
-h1,h2,h3,h4,h5{
+h1,h2{
   font-weight: 800;
+}
+
+h3,h4,h5{
+  font-weight: 600;
 }
 
 h2.site-message{
@@ -66,7 +70,7 @@ span.taps-error { color:#333;  }
 
 span.info-title{
     display:block;
-    font-weight:800;
+    font-weight:600;
     margin-bottom: 10px;
 }
 

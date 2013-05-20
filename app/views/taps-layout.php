@@ -5,9 +5,9 @@
 <base href="<?php echo myUrl('',true)?>" />
 <title><?php echo $GLOBALS['sitename']?></title>
 
-<meta property="og:url" content="http://colinwaddell.com/tapsaff/"/> 
+<meta property="og:url" content="<?php echo myUrl('',true)?>"/> 
 <meta property="og:title" content="Glasgow, taps-aff or taps-oan?"/> 
-<meta property="og:image" content="http://colinwaddell.com/tapsaff/public/img/logo.png"/>
+<meta property="og:image" content="<?php echo myUrl('',true)?>/public/img/logo.png"/>
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,9 +15,9 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,800' rel='stylesheet' type='text/css' />
-<link rel="stylesheet" id="taps-style"  href="public/css/taps.css" type="text/css" media="all" />
-<link rel="stylesheet" id="skeleton-framework"  href="public/css/skeleton.css" type="text/css" media="all" />
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,800' rel='stylesheet' type='text/css' />
+<link rel="stylesheet" id="taps-style"  href="<?php echo myUrl('public/css/taps.css',true)?>" type="text/css" media="all" />
+<link rel="stylesheet" id="skeleton-framework"  href="<?php echo myUrl('public/css/skeleton.css',true)?>" type="text/css" media="all" />
 
 <script type="text/javascript">
 
