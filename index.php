@@ -15,7 +15,7 @@ error_reporting(E_ALL);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 define('WEB_DOMAIN','http://colinwaddell.com/'); //with http:// and NO trailing slash pls
-define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
+define('WEB_FOLDER','/tapsaff_testing/'); //with trailing slash pls
 //define('WEB_FOLDER','/kissmvc_simple/index.php/'); //use this if you do not have mod_rewrite enabled
 define('VIEW_PATH','app/views/'); //with trailing slash pls
 
