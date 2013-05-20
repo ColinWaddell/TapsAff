@@ -1,6 +1,6 @@
 <?php if (isset( $status->taps )): ?>
 
-    <h3 class="site-message">An automated service; keeping the Glasgow public informed.</h3>
+    <h3>An automated service; keeping the Glasgow public informed.</h3>
 
     <div class="container nine">
         <div class="columns four alpha">
