@@ -12,7 +12,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
 <![endif]-->
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,800' rel='stylesheet' type='text/css' />
@@ -52,7 +57,7 @@ _gaq.push(["_trackPageview"]);
       </div>
     </div> <!-- container -->
   </div>
-    <div id="moreinfo">
+    <div id="moreinfo" class="gradient">
       <div class="container">
         <div class="columns offset-by-two twelve">
 
