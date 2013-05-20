@@ -3,8 +3,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 body {
   background:#FFF;
-  font-family:'Open Sans', serif;
-  font-weight:800;
   font-size:2em;
   text-align: center;
 }
@@ -15,6 +13,8 @@ body {
   padding-bottom: 15px;
   text-shadow:0 4px 10px #AAA;
   color:#111;
+  font-family:'Open Sans', serif;
+  font-weight:800;
 }
 
 section.moreinfo {
@@ -31,7 +31,7 @@ section.more-info a {
 
 section.more-info a:hover {
   text-decoration:underline;
-}
+
 
 
 div.fb-like {
