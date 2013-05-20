@@ -72,3 +72,7 @@ hr{
     border:0;
     border-bottom: 1px solid grey;
 }
+
+h3.site-message{
+  padding-top:35px;
+}
