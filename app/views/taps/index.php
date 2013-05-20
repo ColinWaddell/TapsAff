@@ -1,5 +1,5 @@
 <div id="taps-text-area">
-  <p>Glasgow, the weather is:</p>
+  <h2>Glasgow, the weather is:</h2>
 
   <p class="taps-message">
     <p class="taps-message">taps

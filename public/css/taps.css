@@ -9,6 +9,10 @@ body {
   font-weight:300;
 }
 
+h1,h2,h3,h4,h5{
+  font-weight: 800;
+}
+
 #taps-text-area{
   font-family:'Open Sans', serif;
   font-weight: 800;  
