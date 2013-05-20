@@ -9,8 +9,6 @@
 <meta property="og:title" content="Glasgow, taps-aff or taps-oan?"/> 
 <meta property="og:image" content="http://colinwaddell.com/tapsaff/logo.png"/>
 
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
-<script type="text/javascript" src="public/js/taps.js"></script>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,800' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" id="taps-style"  href="public/css/taps.css" type="text/css" media="all" />
 <link rel="stylesheet" id="skeleton-framework"  href="public/css/skeleton.css" type="text/css" media="all" />
