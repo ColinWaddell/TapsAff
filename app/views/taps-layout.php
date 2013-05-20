@@ -49,22 +49,23 @@ _gaq.push(["_trackPageview"]);
     </div>
   </div> <!-- container -->
 
-  <div class="container" id="moreinfo">
-    <div class="columns offset-by-two twelve">
+    <div id="moreinfo">
+      <div class="container">
+        <div class="columns offset-by-two twelve">
 
-        <?php
-          if (isset($moreinfo) && is_array($moreinfo)):
-            foreach ($moreinfo as $entry): ?>
-              <section>
-                <?php echo "$entry\n"; ?>
-              </section>
-            <?php endforeach; 
-          endif;
-        ?>
+            <?php
+              if (isset($moreinfo) && is_array($moreinfo)):
+                foreach ($moreinfo as $entry): ?>
+                  <section>
+                    <?php echo "$entry\n"; ?>
+                  </section>
+                <?php endforeach; 
+              endif;
+            ?>
 
+        </div>
+      </div> <!-- container -->
     </div>
-  </div> <!-- container -->
-
 </body>
 </html>
 
