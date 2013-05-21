@@ -2,7 +2,7 @@
 
     <h3 class="site-purpose">An automated service; keeping the Glasgow public informed.</h3>
 
-    <div class="container nine">
+    <div class="container columns twelve">
 
         <div class="columns four alpha">
             <span class="info-title">
@@ -40,7 +40,7 @@
 
     </div>
 
-    <div class="container nine">
+    <div class="container columns twelve">
         <div class="columns four alpha">
             <span class="info-title">
                 Site Author

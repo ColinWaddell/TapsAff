@@ -35,10 +35,10 @@ _gaq.push(["_trackPageview"]);
 
 </head>
 <body>
+
   <div id="main">
     <div class="container">
       <div class="columns offset-by-two twelve">
-          <!-- Main Content -->
           <?php
             if (isset($body) && is_array($body)):
               foreach ($body as $entry): ?>
@@ -48,27 +48,42 @@ _gaq.push(["_trackPageview"]);
               <?php endforeach; 
             endif
           ?>
-          <!-- Main Content -->
+      </div> 
+    </div> <!-- container -->
+  </div> <!-- maincontent -->
+
+  <div id="social-media">
+    <div class="container">
+      <div class="columns offset-by-two twelve">
+          <?php
+            if (isset($socialmedia) && is_array($socialmedia)):
+              foreach ($socialmedia as $entry): ?>
+                <section>
+                  <?php echo "$entry\n"; ?>
+                </section>
+              <?php endforeach; 
+            endif
+          ?>
+      </div> 
+    </div> <!-- container -->
+  </div> <!-- socialmedia -->
+    
+  <div id="moreinfo">
+    <div class="container">
+      <div class="columns offset-by-two twelve">
+        <?php
+          if (isset($moreinfo) && is_array($moreinfo)):
+            foreach ($moreinfo as $entry): ?>
+              <section>
+                <?php echo "$entry\n"; ?>
+              </section>
+            <?php endforeach; 
+          endif;
+        ?>
       </div>
     </div> <!-- container -->
-  </div>
-    <div id="moreinfo">
-      <div class="container">
-        <div class="columns offset-by-two twelve">
+  </div> <!-- moreinfo -->
 
-            <?php
-              if (isset($moreinfo) && is_array($moreinfo)):
-                foreach ($moreinfo as $entry): ?>
-                  <section>
-                    <?php echo "$entry\n"; ?>
-                  </section>
-                <?php endforeach; 
-              endif;
-            ?>
-
-        </div>
-      </div> <!-- container -->
-    </div> <!-- moreinfo -->
 </body>
 </html>
 
