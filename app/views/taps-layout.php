@@ -38,7 +38,7 @@ _gaq.push(["_trackPageview"]);
 
   <div id="main">
     <div class="container">
-      <div class="columns offset-by-two twelve">
+      <div class="columns offset-by-two twelve alpha">
           <?php
             if (isset($body) && is_array($body)):
               foreach ($body as $entry): ?>
@@ -54,12 +54,12 @@ _gaq.push(["_trackPageview"]);
 
   <div id="social-media">
     <div class="container">
-      <div class="columns offset-by-two twelve">
+      <div class="columns offset-by-two twelve alpha">
           <?php
             if (isset($socialmedia) && is_array($socialmedia)):
               foreach ($socialmedia as $entry): ?>
                 <section>
-                  <?php echo "$entry\n"; ?>
+                  <?php // echo "$entry\n"; ?>
                 </section>
               <?php endforeach; 
             endif
@@ -70,7 +70,7 @@ _gaq.push(["_trackPageview"]);
     
   <div id="moreinfo">
     <div class="container">
-      <div class="columns offset-by-two twelve">
+      <div class="columns offset-by-two twelve alpha">
         <?php
           if (isset($moreinfo) && is_array($moreinfo)):
             foreach ($moreinfo as $entry): ?>
