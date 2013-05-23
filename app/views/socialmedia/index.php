@@ -1,12 +1,12 @@
 
-<div class="container columns twelve">
+<div class="container columns twelve alpha">
 
   <div class="columns offset-by-three two alpha">
-    <p>twitter</p>
+    <a target="_blank" href="https://twitter.com/TapsAffGlasgow"><img src="<?php echo myUrl('public/img/twitter.png', TRUE); ?>" alt="" /></a>
   </div>
 
   <div class="columns offset-by-two two">
-    <p>facebook</p>
+    <a target="_blank" href="https://www.facebook.com/pages/Taps-Aff/456004927818100"><img src="<?php echo myUrl('public/img/facebook.png', TRUE); ?>" alt="" /></a>
   </div>
   
 </div>
