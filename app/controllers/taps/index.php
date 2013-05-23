@@ -3,6 +3,7 @@
 function update_json() {
   
   $current_datetime = new DateTime();
+  $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
   $json_web = json_decode( @file_get_contents( $GLOBALS['json_url'] ));
 
   // Have to test local json file was found ok
@@ -43,6 +44,7 @@ function retrieve_taps_status() {
   if (isset( $json_local ))
   {
     $local_datetime = new DateTime($json_local->datetime);
+    $local_datetime->setTimezone(new DateTimeZone('Europe/London'));
     $local_datetime->modify($GLOBALS['json_lifespan']); // This is the time the local copy is valid until
     $current_datetime = new DateTime();
     
