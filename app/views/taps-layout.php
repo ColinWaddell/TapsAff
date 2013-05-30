@@ -16,7 +16,6 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,800' rel='stylesheet' type='text/css' />
 <link rel="stylesheet" id="taps-style"  href="<?php echo myUrl('public/css/taps.css',true)?>" type="text/css" media="all" />
 <link rel="stylesheet" id="skeleton-framework"  href="<?php echo myUrl('public/css/skeleton.css',true)?>" type="text/css" media="all" />
 
