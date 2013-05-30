@@ -1,5 +1,7 @@
+<?php echo $status->place_error; ?>
+
 <div id="taps-text-area">
-  <h2 class="site-message">Glasgow, the weather is:</h2>
+  <h2 class="site-message"><?php echo $status->location; ?>, the weather is:</h2>
 
     <p class="taps-message">taps
     <?php if (isset( $status->taps )): ?>
