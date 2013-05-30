@@ -16,6 +16,18 @@
   font-weight: 800;
   src: local('Open Sans Extrabold'), local('OpenSans-Extrabold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/EInbV5DfGHOiMmvb1Xr-hqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
 }
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxvR_54zmj3SbGZQh3vCOwvY.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v6/PRmiXeptR36kaC0GEAetxuw_rQOTGi-AJs5XCWaKIhU.woff) format('woff');
+}
 
 
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
@@ -70,6 +82,27 @@ a:hover {
   padding-bottom: 15px;
   text-shadow:0 4px 10px #AAA;
   color:#111;
+}
+
+.taps-definition {
+  font-size:16px;
+  font-weight:300;
+  padding-top:50px;
+  color: #888;
+  font-style: italic;
+  text-align: justify;
+}
+
+.taps-definition > span.b {
+  font-weight: 600;
+  font-style: italic;
+}
+
+.superscript{
+  vertical-align: super;
+  font-size:10px;
+  color: #CE2C2C;
+  font-weight: 600;
 }
 
 p.close{
