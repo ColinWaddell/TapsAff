@@ -86,7 +86,9 @@ span.taps-error { color:#333;  }
   padding-bottom: 5px;
 }
 
-
+#store-button{
+  padding-top:20px;
+}
 
 
 #moreinfo {
@@ -130,6 +132,16 @@ span.info-value{
 
   .taps-message {
     line-height: 1.1em;
+  }
+
+}
+
+@media (min-width: 767px){
+  #store-button{
+    position: fixed;
+    top:10px;
+    padding-top:0;
+    right:10px;
   }
 
 }

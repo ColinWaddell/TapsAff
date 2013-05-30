@@ -86,6 +86,15 @@ _gaq.push(["_trackPageview"]);
       </div> <!-- container -->
     </div> <!-- socialmedia -->
 
+    <div id="store"> <!-- store -->
+      <div class="container">
+        <div class="columns offset-by-six four alpha">
+            <div id="store-button">
+             <a target="_blank" href="http://www.zazzle.co.uk/TapsAff"><img src="public/img/Store-Badge.png" alt="" /></a> 
+            </div>
+        </div>
+      </div> <!-- container -->
+    </div> <!-- store -->
 
   </div> <!-- moreinfo -->
 
