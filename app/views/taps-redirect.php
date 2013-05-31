@@ -1,3 +1,3 @@
 <?php
-   header( 'Location: '.myUrl($location, true) ) ;
+  header( 'Location: '.myUrl($location, true) );
 ?>

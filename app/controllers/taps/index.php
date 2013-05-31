@@ -85,7 +85,7 @@ function _index($location='') {
       $location = $GLOBALS['default_location'];
 
     $data['status']=retrieve_taps_status($location);
-    $_SESSION['location'] = $location;
+    $_SESSION['location'] = $data['status']->location;
 
     $data['body'][]=View::do_fetch(VIEW_PATH.'taps/index.php',$data);
     $data['facebook'][]=View::do_fetch(VIEW_PATH.'facebook/index.php');

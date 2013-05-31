@@ -1,4 +1,3 @@
-<?php echo $status->place_error; ?>
 
 <div id="taps-text-area">
   <h2 class="site-message"><?php echo $status->location; ?>, the weather is:</h2>

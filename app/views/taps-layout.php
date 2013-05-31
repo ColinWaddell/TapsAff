@@ -39,22 +39,6 @@ _gaq.push(["_trackPageview"]);
   <div id="main">
     <div class="container">
       <div class="columns offset-by-two twelve alpha">
-        <?php
-          if (isset($search) && is_array($search)):
-            foreach ($search as $entry): ?>
-              <section>
-                <?php echo "$entry\n"; ?>
-              </section>
-            <?php endforeach; 
-          endif
-        ?>
-      </div>
-    </div>
-  </div>
-
-  <div id="main">
-    <div class="container">
-      <div class="columns offset-by-two twelve alpha">
           <?php
             if (isset($body) && is_array($body)):
               foreach ($body as $entry): ?>
@@ -68,6 +52,21 @@ _gaq.push(["_trackPageview"]);
     </div> <!-- container -->
   </div> <!-- maincontent -->
 
+  <div id="location-entry">
+    <div class="container">
+      <div class="columns offset-by-three ten alpha">
+        <?php
+          if (isset($search) && is_array($search)):
+            foreach ($search as $entry): ?>
+              <section>
+                <?php echo "$entry\n"; ?>
+              </section>
+            <?php endforeach; 
+          endif
+        ?>
+      </div>
+    </div>
+  </div>
     
   <div id="moreinfo">
 

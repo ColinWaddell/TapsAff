@@ -154,6 +154,34 @@ span.info-value{
     display: block;
 }
 
+div#location-entry{
+  background: #fff;
+  padding-bottom:20px;
+}
+
+input#location{
+  width: 100%;
+  text-align: center;
+  padding: 9px 0px 4px 0px;
+  font-size: 24px;
+  line-height: 36px;
+  height: 53px;
+  border-radius: 0px;
+  outline: none;
+  border: none;
+  padding: 0;
+  background: #fff;
+  border: 1px solid #EEE;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 767px) and (min-width: 480px){
   #moreinfo > .container > div > section > .container > .columns{
     margin: 5px 0;              
