@@ -72,19 +72,28 @@ function retrieve_taps_status($location){
 
 function _index($location='') {
 
-  if (isset($_SESSION['location']) && ($location=='') )
-    $location = $_SESSION['location'];
-  elseif ($location=='')
-    $location = $GLOBALS['default_location'];
+  if (strpos($location,'?location=') !== false)
+  {
+    $data['location'] = str_replace('?location=', '', $location);;
+    View::do_dump(VIEW_PATH.'taps-redirect.php',$data);	  
+  }
+  else
+  {
+    if (isset($_SESSION['location']) && ($location=='') )
+      $location = $_SESSION['location'];
+    elseif ($location=='')
+      $location = $GLOBALS['default_location'];
 
-  $data['status']=retrieve_taps_status($location);
-  $_SESSION['location'] = $location;
+    $data['status']=retrieve_taps_status($location);
+    $_SESSION['location'] = $location;
 
-  $data['body'][]=View::do_fetch(VIEW_PATH.'taps/index.php',$data);
-  $data['facebook'][]=View::do_fetch(VIEW_PATH.'facebook/index.php');
-  $data['moreinfo'][]=View::do_fetch(VIEW_PATH.'moreinfo/index.php', $data);
-  $data['socialmedia'][]=View::do_fetch(VIEW_PATH.'socialmedia/index.php');
-  View::do_dump(VIEW_PATH.'taps-layout.php',$data);	  
+    $data['body'][]=View::do_fetch(VIEW_PATH.'taps/index.php',$data);
+    $data['facebook'][]=View::do_fetch(VIEW_PATH.'facebook/index.php');
+    $data['search'][]=View::do_fetch(VIEW_PATH.'search/index.php',$data);
+    $data['moreinfo'][]=View::do_fetch(VIEW_PATH.'moreinfo/index.php', $data);
+    $data['socialmedia'][]=View::do_fetch(VIEW_PATH.'socialmedia/index.php');
+    View::do_dump(VIEW_PATH.'taps-layout.php',$data);	  
+  }
 
 }
 
