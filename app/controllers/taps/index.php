@@ -16,8 +16,8 @@ function retrieve_taps_status($location){
   if (isset( $json_web->query ) ){
     if ($json_web->query->count == 0)
     {
-      $place_error = 'Can\'t find '.$location;
-      $location = $GLOBALS['default_location'];
+      $place_error = 'Location \''.$location.'\' unknown.';
+      $location = isset($_SESSION['location']) ? $_SESSION['location'] : $GLOBALS['default_location']; 
       $json_web = json_decode( @file_get_contents( build_query($location) ));
     }
   }
