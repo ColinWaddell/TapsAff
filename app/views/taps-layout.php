@@ -3,7 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <base href="<?php echo myUrl('',true)?>" />
-<title><?php echo $GLOBALS['sitename']?></title>
+<title>
+  <?php echo $location.', '.$GLOBALS['sitename']?>
+</title>
 
 <meta property="og:url" content="<?php echo myUrl('',true)?>"/> 
 <meta property="og:title" content="Glasgow, taps-aff or taps-oan?"/> 
@@ -52,6 +54,21 @@ _gaq.push(["_trackPageview"]);
     </div> <!-- container -->
   </div> <!-- maincontent -->
 
+  <div id="location-entry">
+    <div class="container">
+      <div class="columns offset-by-three ten alpha">
+        <?php
+          if (isset($search) && is_array($search)):
+            foreach ($search as $entry): ?>
+              <section>
+                <?php echo "$entry\n"; ?>
+              </section>
+            <?php endforeach; 
+          endif
+        ?>
+      </div>
+    </div>
+  </div>
     
   <div id="moreinfo">
 
