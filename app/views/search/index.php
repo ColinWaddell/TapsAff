@@ -7,6 +7,6 @@
           if (isset($status->place_error) && $status->place_error != '')
             echo $status->place_error;
           else
-            echo 'Choose your location...';
+            echo 'Where are ye...?';
         ?>">
 </form>

@@ -3,7 +3,9 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <base href="<?php echo myUrl('',true)?>" />
-<title><?php echo $GLOBALS['sitename']?></title>
+<title>
+  <?php echo $location.', '.$GLOBALS['sitename']?>
+</title>
 
 <meta property="og:url" content="<?php echo myUrl('',true)?>"/> 
 <meta property="og:title" content="Glasgow, taps-aff or taps-oan?"/> 
