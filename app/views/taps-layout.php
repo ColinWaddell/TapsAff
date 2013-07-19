@@ -8,7 +8,7 @@
 </title>
 
 <meta property="og:url" content="<?php echo myUrl('',true)?>"/> 
-<meta property="og:title" content="Glasgow, taps-aff or taps-oan?"/> 
+<meta property="og:title" content="<?php echo $location.', '.$GLOBALS['sitename'] ?>"/> 
 <meta property="og:image" content="<?php echo myUrl('',true)?>/public/img/logo.png"/>
 <meta property="fb:admins" content="732492372" />
 
