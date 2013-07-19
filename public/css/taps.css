@@ -193,7 +193,33 @@ input#location{
  /*transition: background-color 100ms linear;*/
 /*}*/
 
+div#share p{
+  font-size: 30px;
+  font-weight: 300;
+  text-align: right;
+}
 
+div#share a.social-media{
+  text-align: left;
+  text-indent: -5000px;
+  width: 30px;
+  height:30px;
+  display: inline-block;
+}
+
+div#share a.social-media.facebook{
+  background:url('../img/socialmedia.png');
+  background-position-x: 60px;
+}
+
+div#share a.social-media.twitter{
+  background:url('../img/socialmedia.png');
+}
+
+div#share a.social-media.google{
+  background:url('../img/socialmedia.png');
+  background-position-x: 30px;
+}
 
 @media only screen and (max-width: 767px) and (min-width: 480px){
   #moreinfo > .container > div > section > .container > .columns{

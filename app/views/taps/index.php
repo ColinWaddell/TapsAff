@@ -13,9 +13,14 @@
       </span>
     <?php endif; ?>
     </p>
-    <?php if (($status->temp_f >= $GLOBALS['taps_temp'] - 5) && ($status->temp_f <= $GLOBALS['taps_temp'])): ?>
-      <p class="close">...but it's close!</p>
-    <?php endif; ?>
+
+    <div id="share">
+      <p>Share:
+        <a target="_blank" class="social-media google" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php echo urlencode(curPageURL($status->location)); ?>">Google</a>
+        <a target="_blank" class="social-media facebook" href="http://www.facebook.com/share.php?u=<?php echo urlencode(curPageURL($status->location)); ?>">Facebook</a>
+        <a target="_blank" class="social-media twitter" href="http://twitter.com/home/?status=<?php echo urlencode(curPageURL($status->location)); ?>">Twitter</a>
+      </p>
+    </div>
 
     <div class="offset-by-one ten columns alpha omega">
       <p class="taps-definition">
