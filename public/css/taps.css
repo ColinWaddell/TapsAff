@@ -82,6 +82,7 @@ a:hover {
   padding-bottom: 15px;
   text-shadow:0 4px 10px #AAA;
   color:#111;
+  line-height: 1.1em;
 }
 
 .taps-definition {
