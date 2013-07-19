@@ -170,15 +170,25 @@ input#location{
   outline: none;
   border: none;
   padding: 0;
-  background: #fff;
+  background-color: #fff;
   border: 1px solid #EEE;
   margin-top: 10px;
 }
 
 
+/*input#location.notfound{*/
+ /*background-color: #FF5454;*/
+/*color: #000;*/
+/*}*/
 
-
-
+/*input#location.notfound:focus{*/
+  /*background-color: #fff;*/
+ /*-webkit-transition: background-color 100ms linear;*/
+ /*-moz-transition: background-color 100ms linear;*/
+ /*-o-transition: background-color 100ms linear;*/
+ /*-ms-transition: background-color 100ms linear;*/
+ /*transition: background-color 100ms linear;*/
+/*}*/
 
 
 
