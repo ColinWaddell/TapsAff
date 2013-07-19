@@ -158,6 +158,7 @@ span.info-value{
 div#location-entry{
   background: #fff;
   padding-bottom:20px;
+  font-style: italic;
 }
 
 input#location{
@@ -174,6 +175,7 @@ input#location{
   background-color: #fff;
   border: 1px solid #EEE;
   margin-top: 10px;
+  font-style: italic;
 }
 
 
