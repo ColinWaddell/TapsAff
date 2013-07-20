@@ -84,6 +84,8 @@ function _index($location='') {
     elseif ($location=='')
       $location = $GLOBALS['default_location'];
 
+    $location = str_replace(" ","+",$location);
+
     $data['location'] = $location;
     $data['status']=retrieve_taps_status($location);
     $_SESSION['location'] = $data['status']->location;
