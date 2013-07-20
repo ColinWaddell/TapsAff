@@ -158,7 +158,7 @@ span.info-value{
 
 div#location-entry{
   background: #fff;
-  padding-bottom:20px;
+  padding: 20px 0;
   font-style: italic;
   border: 0;
 }
