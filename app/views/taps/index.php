@@ -16,9 +16,9 @@
 
     <div id="share">
       <p>Share:
-        <a target="_blank" class="social-media google" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php echo urlencode(curPageURL($status->location)); ?>">Google</a>
-        <a target="_blank" class="social-media facebook" href="http://www.facebook.com/share.php?u=<?php echo urlencode(curPageURL($status->location)); ?>">Facebook</a>
-        <a target="_blank" class="social-media twitter" href="http://twitter.com/home/?status=<?php echo urlencode(curPageURL($status->location)); ?>">Twitter</a>
+        <a target="_blank" class="social-media google" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php echo urlencode(myUrl($status->location,true)); ?>">Google</a>
+        <a target="_blank" class="social-media facebook" href="http://www.facebook.com/share.php?u=<?php echo urlencode(myUrl($status->location,true)); ?>">Facebook</a>
+        <a target="_blank" class="social-media twitter" href="http://twitter.com/home/?status=<?php echo urlencode(myUrl($status->location,true)); ?>">Twitter</a>
       </p>
     </div>
 
