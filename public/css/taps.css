@@ -159,6 +159,7 @@ div#location-entry{
   background: #fff;
   padding-bottom:20px;
   font-style: italic;
+  border: 0;
 }
 
 input#location{
