@@ -59,10 +59,6 @@ function myUrl($url='',$fullurl=false) {
   return $s;
 }
 
-function curPageURL($url) {
-  return "http://". $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-}
-
 //==============================================
 // Start the controller
 //===============================================
