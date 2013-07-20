@@ -85,6 +85,7 @@ function _index($location='') {
       $location = $GLOBALS['default_location'];
 
     $location = str_replace(" ","+",$location);
+    $location = ucwords($location);
 
     $data['location'] = $location;
     $data['status']=retrieve_taps_status($location);
