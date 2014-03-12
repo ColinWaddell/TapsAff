@@ -26,8 +26,13 @@
       <p class="taps-definition">
         <span class="b">Taps-Aff (Scots Vernacular) </span>Literally "tops off."
         The removing of one's shirt in the event of warm weather, a phenomenon rarely seen in Glasgow.
-        Now an expression describing good times being had.<a href="http://www.urbandictionary.com/define.php?term=taps+aff" target="_blank" class="superscript">1</a>  <br /><br />
+        Now an expression describing good times being had.<a href="http://www.urbandictionary.com/define.php?term=taps+aff" target="_blank" class="superscript">1</a>
+      </p>
+      <p>
         <span class="b">Antonym:</span> Taps-Oan, "tops on".
+      </p>
+      <p>
+        <span class="b">Current Temperature:</span> <?php echo $status->temp_c; ?>&deg;C (<?php echo $status->temp_f; ?>&deg;F)
       </p>
     </div>
 
