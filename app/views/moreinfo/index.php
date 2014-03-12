@@ -2,18 +2,9 @@
 
     <h3 class="site-purpose">An automated service; keeping the <?php echo $status->location; ?> public informed.</h3>
 
-    <div class="container columns sixteen alpha omega">
+    <div class="container columns offset-by-two twelve alpha">
 
         <div class="columns four alpha">
-            <span class="info-title">
-                Current Temperature
-            </span>
-            <span class="info-value">
-                <?php echo $status->temp_c; ?>&deg;C (<?php echo $status->temp_f; ?>&deg;F)
-            </span>
-        </div>
-
-        <div class="columns four">
             <span class="info-title">
                 Site Author
             </span>
