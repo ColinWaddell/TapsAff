@@ -2,7 +2,7 @@
 
     <h3 class="site-purpose">An automated service; keeping the <?php echo $status->location; ?> public informed.</h3>
 
-    <div class="container columns twelve alpha">
+    <div class="container columns sixteen alpha omega">
 
         <div class="columns four alpha">
             <span class="info-title">
@@ -13,34 +13,6 @@
             </span>
         </div>
 
-
-        <div class="columns four">
-            <span class="info-title">
-                Last Updated
-            </span>
-            <span class="info-value">
-                <?php echo $status->datetime ?> <br /> Valid for <?php echo trim($status->lifespan,'+') ?>
-            </span>
-        </div>
-
-        <div class="columns four omega">
-            <span class="info-title">
-                Facebook
-            </span>
-            <span class="info-value">
-            <?php
-              if (isset($facebook) && is_array($facebook)):
-                foreach ($facebook as $entry): ?>
-                    <?php echo "$entry\n"; ?>
-                <?php endforeach; 
-              endif;
-            ?>
-            </span>
-        </div>
-
-    </div>
-
-    <div class="container columns twelve alpha">
         <div class="columns four alpha">
             <span class="info-title">
                 Site Author
@@ -61,14 +33,17 @@
 
         <div class="columns four omega">
             <span class="info-title">
-                Weather Feed
+                Facebook
             </span>
             <span class="info-value">
-                <a href='<?php echo $GLOBALS['json_url'] ?>' 
-                   target='_blank'>
-                 YahooAPI Feed
-                </a>
-            </span>        
+            <?php
+              if (isset($facebook) && is_array($facebook)):
+                foreach ($facebook as $entry): ?>
+                    <?php echo "$entry\n"; ?>
+                <?php endforeach; 
+              endif;
+            ?>
+            </span>
         </div>
         
     </div>
