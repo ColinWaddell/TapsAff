@@ -13,7 +13,7 @@
             </span>
         </div>
 
-        <div class="columns four alpha">
+        <div class="columns four">
             <span class="info-title">
                 Site Author
             </span>

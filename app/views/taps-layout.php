@@ -73,7 +73,7 @@ _gaq.push(["_trackPageview"]);
   <div id="moreinfo">
 
     <div class="container">
-      <div class="columns offset-by-two twelve alpha">
+      <div class="columns sixteen alpha omega">
         <?php
           if (isset($moreinfo) && is_array($moreinfo)):
             foreach ($moreinfo as $entry): ?>
