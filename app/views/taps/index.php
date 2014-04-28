@@ -7,6 +7,12 @@
       <span id="dynamic-taps-message" class="taps-<?php echo $status->taps; ?>">
         <?php echo " ".$status->taps; ?>
       </span>
+
+
+    <?php if (isset($status->message) && $status->message !=''): ?>
+      <h3 class="sub-message"><?php echo $status->message; ?></h3>
+    <?php endif; ?>
+
     <?php else: ?>
       <span id="dynamic-taps-message" class="taps-error">
         error

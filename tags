@@ -1,0 +1,206 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+APP_PATH	index.php	/^define('APP_PATH','app\/'); \/\/with trailing slash pls$/;"	d
+COMPRESS_ARRAY	kissmvc_core.php	/^    $this->COMPRESS_ARRAY=$compress_array;$/;"	v
+COMPRESS_ARRAY	kissmvc_core.php	/^  protected $COMPRESS_ARRAY=true;$/;"	v
+Controller	kissmvc.php	/^class Controller extends KISS_Controller {$/;"	c
+KISS_Controller	kissmvc_core.php	/^abstract class KISS_Controller {$/;"	c
+KISS_Model	kissmvc_core.php	/^abstract class KISS_Model  {$/;"	c
+KISS_View	kissmvc_core.php	/^abstract class KISS_View {$/;"	c
+Model	kissmvc.php	/^class Model extends KISS_Model  {$/;"	c
+QUOTE_STYLE	kissmvc_core.php	/^    $this->QUOTE_STYLE=$quote_style;$/;"	v
+QUOTE_STYLE	kissmvc_core.php	/^  protected $QUOTE_STYLE='MYSQL'; \/\/ valid types are MYSQL,MSSQL,ANSI$/;"	v
+TwitterAPIExchange	lib/twitter-api/TwitterAPIExchange.php	/^class TwitterAPIExchange$/;"	c
+VIEW_PATH	index.php	/^define('VIEW_PATH','app\/views\/'); \/\/with trailing slash pls$/;"	d
+View	kissmvc.php	/^class View extends KISS_View {$/;"	c
+WEB_DOMAIN	index.php	/^define('WEB_DOMAIN','http:\/\/colinwaddell-mbp.local'); \/\/with http:\/\/ and NO trailing slash pls$/;"	d
+WEB_FOLDER	index.php	/^define('WEB_FOLDER','\/tapsaff\/'); \/\/with trailing slash pls$/;"	d
+__construct	kissmvc_core.php	/^  function __construct($controller_path,$web_folder,$default_controller,$default_action)  {$/;"	f
+__construct	kissmvc_core.php	/^  function __construct($file='',$vars='')  {$/;"	f
+__construct	kissmvc_core.php	/^  function __construct($pkname='',$tablename='',$dbhfnname='getdbh',$quote_style='MYSQL',$compress_array=true) {$/;"	f
+__construct	lib/twitter-api/TwitterAPIExchange.php	/^    public function __construct(array $settings)$/;"	f
+__get	kissmvc_core.php	/^  function __get($key) {$/;"	f
+__set	kissmvc_core.php	/^  function __set($key, $val) {$/;"	f
+__set	kissmvc_core.php	/^  function __set($key,$var) {$/;"	f
+_index	app/controllers/taps/index.php	/^function _index($location='') {$/;"	f
+action	kissmvc.php	/^      $this->action='index';$/;"	v
+action	kissmvc_core.php	/^      $this->action=$p[1];$/;"	v
+action	kissmvc_core.php	/^    $this->action=$default_action;$/;"	v
+action	kissmvc_core.php	/^  protected $action;$/;"	v
+add	kissmvc_core.php	/^  function add($key,$var) {$/;"	f
+arr	kissmvc_core.php	/^    $arr=array();$/;"	v
+base_info	lib/twitter-api/TwitterAPIExchange.php	/^        $base_info = $this->buildBaseString($url, $requestMethod, $oauth);$/;"	v
+bindings	kissmvc_core.php	/^      $bindings= trim($bindings) ? array($bindings) : array();$/;"	v
+bindings	kissmvc_core.php	/^      $bindings=trim($bindings) ? array($bindings) : array();$/;"	v
+buildAuthorizationHeader	lib/twitter-api/TwitterAPIExchange.php	/^    private function buildAuthorizationHeader($oauth) $/;"	f
+buildBaseString	lib/twitter-api/TwitterAPIExchange.php	/^    private function buildBaseString($baseURI, $method, $params) $/;"	f
+buildOauth	lib/twitter-api/TwitterAPIExchange.php	/^    public function buildOauth($url, $requestMethod)$/;"	f
+build_query	app/controllers/taps/index.php	/^function build_query($location){$/;"	f
+class	kissmvc_core.php	/^    $class=get_class($this);$/;"	v
+composite_key	lib/twitter-api/TwitterAPIExchange.php	/^        $composite_key = rawurlencode($consumer_secret) . '&' . rawurlencode($oauth_access_token_secret);$/;"	v
+consumer_key	lib/twitter-api/TwitterAPIExchange.php	/^        $consumer_key = $this->consumer_key;$/;"	v
+consumer_key	lib/twitter-api/TwitterAPIExchange.php	/^        $this->consumer_key = $settings['consumer_key'];$/;"	v
+consumer_key	lib/twitter-api/TwitterAPIExchange.php	/^    private $consumer_key;$/;"	v
+consumer_secret	lib/twitter-api/TwitterAPIExchange.php	/^        $consumer_secret = $this->consumer_secret;$/;"	v
+consumer_secret	lib/twitter-api/TwitterAPIExchange.php	/^        $this->consumer_secret = $settings['consumer_secret'];$/;"	v
+consumer_secret	lib/twitter-api/TwitterAPIExchange.php	/^    private $consumer_secret;$/;"	v
+controller	index.php	/^$controller = new Controller(APP_PATH.'controllers\/',WEB_FOLDER,'taps','index');$/;"	v
+controller	kissmvc.php	/^      $this->controller='taps';$/;"	v
+controller	kissmvc_core.php	/^      $this->controller=$p[0];$/;"	v
+controller	kissmvc_core.php	/^    $this->controller=$default_controller;$/;"	v
+controller	kissmvc_core.php	/^  protected $controller;$/;"	v
+controller_path	kissmvc_core.php	/^    $this->controller_path=$controller_path;$/;"	v
+controller_path	kissmvc_core.php	/^  protected $controller_path='..\/app\/controllers\/'; \/\/with trailing slash$/;"	v
+controllerfile	kissmvc_core.php	/^    $controllerfile=$this->controller_path.$this->controller.'\/'.$this->action.'.php';$/;"	v
+create	kissmvc_core.php	/^  function create() {$/;"	f
+current_datetime	app/controllers/taps/index.php	/^  $current_datetime = new DateTime();$/;"	v
+data	app/controllers/taps/index.php	/^      $data = $json_web->query->results->channel;$/;"	v
+data	app/controllers/taps/index.php	/^      $data = $json_web->query->results->channel[0];$/;"	v
+dbh	kissmvc_core.php	/^    $dbh=$this->getdbh();$/;"	v
+dbhfnname	kissmvc_core.php	/^    $this->dbhfnname=$dbhfnname; \/\/dbh function name$/;"	v
+dbhfnname	kissmvc_core.php	/^  protected $dbhfnname;$/;"	v
+delete	kissmvc_core.php	/^  function delete() {$/;"	f
+do_dump	kissmvc_core.php	/^  static function do_dump($file='',$vars='') {$/;"	f
+do_dump_str	kissmvc_core.php	/^  static function do_dump_str($str,$vars='') {$/;"	f
+do_fetch	kissmvc_core.php	/^  static function do_fetch($file='',$vars='') {$/;"	f
+do_fetch_str	kissmvc_core.php	/^  static function do_fetch_str($str,$vars='') {$/;"	f
+dump	kissmvc_core.php	/^  function dump($vars='') {$/;"	f
+enquote	kissmvc_core.php	/^  protected function enquote($name) {$/;"	f
+exists	kissmvc_core.php	/^  function exists($checkdb=false) {$/;"	f
+explode_http_request	kissmvc_core.php	/^  function explode_http_request() {$/;"	f
+feed	lib/twitter-api/TwitterAPIExchange.php	/^        $feed = curl_init();$/;"	v
+fetch	kissmvc_core.php	/^  function fetch($vars='') {$/;"	f
+file	kissmvc_core.php	/^      $this->file = $file;$/;"	v
+file	kissmvc_core.php	/^  protected $file='';$/;"	v
+for	kissmvc_core.php	/^  \/\/Override this function for your own custom 404 page$/;"	f
+function	kissmvc_core.php	/^    $function='_'.$this->action;$/;"	v
+get	kissmvc_core.php	/^  function get($key) {$/;"	f
+getGetfield	lib/twitter-api/TwitterAPIExchange.php	/^    public function getGetfield()$/;"	f
+getPostfields	lib/twitter-api/TwitterAPIExchange.php	/^    public function getPostfields()$/;"	f
+getdbh	kissmvc_core.php	/^  protected function getdbh() {$/;"	f
+getdbh	kissmvc_core.php	/^\/\/ Requires a function getdbh() which will return a PDO handler$/;"	f
+getdbh	kissmvc_core.php	/^function getdbh() {$/;"	f
+getfield	lib/twitter-api/TwitterAPIExchange.php	/^        $getfield = $this->getGetfield();$/;"	v
+getfield	lib/twitter-api/TwitterAPIExchange.php	/^        $this->getfield = $string;$/;"	v
+getfield	lib/twitter-api/TwitterAPIExchange.php	/^    private $getfield;$/;"	v
+getfield	lib/twitter-api/index.php	/^$getfield = '?screen_name=J7mbo';$/;"	v
+getfields	lib/twitter-api/TwitterAPIExchange.php	/^            $getfields = str_replace('?', '', explode('&', $getfield));$/;"	v
+header	lib/twitter-api/TwitterAPIExchange.php	/^        $header = array($this->buildAuthorizationHeader($this->oauth), 'Expect:');$/;"	v
+i	kissmvc_core.php	/^    $i=0;$/;"	v
+json	lib/twitter-api/TwitterAPIExchange.php	/^        $json = curl_exec($feed);$/;"	v
+json_local	app/controllers/taps/index.php	/^    $json_local = json_encode ($/;"	v
+json_web	app/controllers/taps/index.php	/^      $json_web = json_decode( @file_get_contents( build_query($location) ));$/;"	v
+json_web	app/controllers/taps/index.php	/^  $json_web = json_decode( @file_get_contents( build_query($location) ));$/;"	v
+k	kissmvc_core.php	/^    foreach ($this->rs as $k => $v)$/;"	v
+key	kissmvc_core.php	/^      foreach ($rs as $key => $val)$/;"	v
+key	kissmvc_core.php	/^    foreach ($arr as $key => $val)$/;"	v
+key	kissmvc_core.php	/^    foreach ($rs as $key => $val)$/;"	v
+key	lib/twitter-api/TwitterAPIExchange.php	/^        foreach($oauth as $key => $value)$/;"	v
+key	lib/twitter-api/TwitterAPIExchange.php	/^        foreach($params as $key=>$value)$/;"	v
+location	app/controllers/taps/index.php	/^      $location = $GLOBALS['default_location'];$/;"	v
+location	app/controllers/taps/index.php	/^      $location = $_SESSION['location'];$/;"	v
+location	app/controllers/taps/index.php	/^      $location = isset($_SESSION['location']) ? $_SESSION['location'] : $GLOBALS['default_location']; $/;"	v
+location	app/controllers/taps/index.php	/^    $location = str_replace(" ","+",$location);$/;"	v
+location	app/controllers/taps/index.php	/^    $location = ucwords($location);$/;"	v
+location	app/controllers/taps/index.php	/^  $location = urldecode($location);$/;"	v
+maps	kissmvc_core.php	/^  \/\/This function maps the controller name and action name to the file location of the .php file to include$/;"	f
+merge	kissmvc_core.php	/^  function merge($arr) {$/;"	f
+myUrl	index.php	/^function myUrl($url='',$fullurl=false) {$/;"	f
+myclass	kissmvc_core.php	/^      $myclass = new $class();$/;"	v
+name	kissmvc_core.php	/^      $this->request_not_found('Invalid function name: '.$function);$/;"	f
+name	kissmvc_core.php	/^    $this->dbhfnname=$dbhfnname; \/\/dbh function name$/;"	f
+oauth	lib/twitter-api/TwitterAPIExchange.php	/^        $oauth = array( $/;"	v
+oauth	lib/twitter-api/TwitterAPIExchange.php	/^        $this->oauth = $oauth;$/;"	v
+oauth	lib/twitter-api/TwitterAPIExchange.php	/^    protected $oauth;$/;"	v
+oauth_access_token	lib/twitter-api/TwitterAPIExchange.php	/^        $oauth_access_token = $this->oauth_access_token;$/;"	v
+oauth_access_token	lib/twitter-api/TwitterAPIExchange.php	/^        $this->oauth_access_token = $settings['oauth_access_token'];$/;"	v
+oauth_access_token	lib/twitter-api/TwitterAPIExchange.php	/^    private $oauth_access_token;$/;"	v
+oauth_access_token_secret	lib/twitter-api/TwitterAPIExchange.php	/^        $oauth_access_token_secret = $this->oauth_access_token_secret;$/;"	v
+oauth_access_token_secret	lib/twitter-api/TwitterAPIExchange.php	/^        $this->oauth_access_token_secret = $settings['oauth_access_token_secret'];$/;"	v
+oauth_access_token_secret	lib/twitter-api/TwitterAPIExchange.php	/^    private $oauth_access_token_secret;$/;"	v
+oauth_signature	lib/twitter-api/TwitterAPIExchange.php	/^        $oauth_signature = base64_encode(hash_hmac('sha1', $base_info, $composite_key, true));$/;"	v
+options	lib/twitter-api/TwitterAPIExchange.php	/^        $options = array( $/;"	v
+p	kissmvc.php	/^    $p = $this->request_uri_parts;$/;"	v
+p	kissmvc_core.php	/^    $p = $this->request_uri_parts;$/;"	v
+params	kissmvc.php	/^      $this->params=array_slice($p,0);$/;"	v
+params	kissmvc.php	/^    $this->params = array();$/;"	v
+params	kissmvc_core.php	/^      $this->params=array_slice($p,2);$/;"	v
+params	kissmvc_core.php	/^    $this->params = array();$/;"	v
+params	kissmvc_core.php	/^  protected $params=array();$/;"	v
+parse_http_request	kissmvc.php	/^  function parse_http_request() {$/;"	f
+parse_http_request	kissmvc_core.php	/^  function parse_http_request() {$/;"	f
+parses	kissmvc.php	/^  \/\/This function parses the HTTP request to get the controller name, action name and parameter array.$/;"	f
+parses	kissmvc_core.php	/^  \/\/This function parses the HTTP request to get the controller name, action name and parameter array.$/;"	f
+performRequest	lib/twitter-api/TwitterAPIExchange.php	/^    public function performRequest($return = true)$/;"	f
+pkname	kissmvc_core.php	/^    $pkname=$this->pkname;$/;"	v
+pkname	kissmvc_core.php	/^    $this->pkname=$pkname; \/\/Name of auto-incremented Primary Key$/;"	v
+pkname	kissmvc_core.php	/^  protected $pkname;$/;"	v
+place_error	app/controllers/taps/index.php	/^      $place_error = 'Location \\''.$location.'\\' unknown.';$/;"	v
+postfields	lib/twitter-api/TwitterAPIExchange.php	/^        $postfields = $this->getPostfields();$/;"	v
+postfields	lib/twitter-api/TwitterAPIExchange.php	/^        $this->postfields = $array;$/;"	v
+postfields	lib/twitter-api/TwitterAPIExchange.php	/^    private $postfields;$/;"	v
+postfields	lib/twitter-api/index.php	/^$postfields = array($/;"	v
+replace	lib/twitter-api/TwitterAPIExchange.php	/^        $replace = array('%23', '%2C', '%2B', '%3A');$/;"	v
+requestMethod	lib/twitter-api/index.php	/^$requestMethod = 'GET';$/;"	v
+requestMethod	lib/twitter-api/index.php	/^$requestMethod = 'POST';$/;"	v
+request_not_found	kissmvc_core.php	/^  function request_not_found($msg='') {$/;"	f
+request_uri_parts	kissmvc_core.php	/^    $this->request_uri_parts = $requri ? explode('\/',$requri) : array();$/;"	v
+request_uri_parts	kissmvc_core.php	/^  protected $request_uri_parts=array();$/;"	v
+requri	kissmvc_core.php	/^      $requri=substr($requri,strlen($this->web_folder));$/;"	v
+requri	kissmvc_core.php	/^    $requri = $_SERVER['REQUEST_URI'];$/;"	v
+result	kissmvc_core.php	/^    $result = $dbh->query($sql)->fetchAll();$/;"	v
+retrieve	kissmvc_core.php	/^  function retrieve($pkvalue) {$/;"	f
+retrieve_many	kissmvc_core.php	/^  function retrieve_many($wherewhat='',$bindings='') {$/;"	f
+retrieve_one	kissmvc_core.php	/^  function retrieve_one($wherewhat='',$bindings='') {$/;"	f
+retrieve_taps_status	app/controllers/taps/index.php	/^function retrieve_taps_status($location){$/;"	f
+return	lib/twitter-api/TwitterAPIExchange.php	/^        $return = 'Authorization: OAuth ';$/;"	v
+return	lib/twitter-api/TwitterAPIExchange.php	/^        $return = array();$/;"	v
+route_request	kissmvc_core.php	/^  function route_request() {$/;"	f
+rs	kissmvc_core.php	/^    $rs = $stmt->fetch(PDO::FETCH_ASSOC);$/;"	v
+rs	kissmvc_core.php	/^  public $rs = array(); \/\/ for holding all object property variables$/;"	v
+s	index.php	/^  $s=$fullurl ? WEB_DOMAIN : '';$/;"	v
+s	kissmvc_core.php	/^    $s = substr($s,1);$/;"	v
+s	kissmvc_core.php	/^    $s='';$/;"	v
+s1	kissmvc_core.php	/^    $s1=$s2='';$/;"	v
+search	lib/twitter-api/TwitterAPIExchange.php	/^        $search = array('#', ',', '+', ':');$/;"	v
+select	kissmvc_core.php	/^  function select($selectwhat='*',$wherewhat='',$bindings='',$pdo_fetch_mode=PDO::FETCH_ASSOC) {$/;"	f
+set	kissmvc_core.php	/^  function set($key, $val) {$/;"	f
+set	kissmvc_core.php	/^  function set($key,$var) {$/;"	f
+setGetfield	lib/twitter-api/TwitterAPIExchange.php	/^    public function setGetfield($string)$/;"	f
+setPostfields	lib/twitter-api/TwitterAPIExchange.php	/^    public function setPostfields(array $array)$/;"	f
+settings	lib/twitter-api/index.php	/^$settings = array($/;"	v
+split	lib/twitter-api/TwitterAPIExchange.php	/^                $split = explode('=', $g);$/;"	v
+sql	kissmvc_core.php	/^    $sql = 'DELETE FROM '.$this->enquote($this->tablename).' WHERE '.$this->enquote($this->pkname).'=?';$/;"	v
+sql	kissmvc_core.php	/^    $sql = 'INSERT INTO '.$this->enquote($this->tablename).' ('.substr($s1,1).') VALUES ('.substr($s2,1).')';$/;"	v
+sql	kissmvc_core.php	/^    $sql = 'SELECT '.$selectwhat.' FROM '.$this->tablename;$/;"	v
+sql	kissmvc_core.php	/^    $sql = 'SELECT * FROM '.$this->enquote($this->tablename).' WHERE '.$this->enquote($this->pkname).'=?';$/;"	v
+sql	kissmvc_core.php	/^    $sql = 'SELECT * FROM '.$this->enquote($this->tablename);$/;"	v
+sql	kissmvc_core.php	/^    $sql = 'SELECT * FROM '.$this->tablename;$/;"	v
+sql	kissmvc_core.php	/^    $sql = 'SELECT 1 FROM '.$this->enquote($this->tablename).' WHERE '.$this->enquote($this->pkname)."='".$this->rs[$this->pkname]."'";$/;"	v
+sql	kissmvc_core.php	/^    $sql = 'UPDATE '.$this->enquote($this->tablename).' SET '.$s.' WHERE '.$this->enquote($this->pkname).'=?';$/;"	v
+status	app/controllers/taps/index.php	/^    $status = ($temp_f > $GLOBALS['taps_temp'] ) ? 'aff' : 'oan';$/;"	v
+stmt	kissmvc_core.php	/^    $stmt = $dbh->prepare($sql);$/;"	v
+string	lib/twitter-api/TwitterAPIExchange.php	/^        $string = str_replace($search, $replace, $string);  $/;"	v
+tablename	kissmvc_core.php	/^    $this->tablename=$tablename; \/\/Corresponding table in database$/;"	v
+tablename	kissmvc_core.php	/^  protected $tablename;$/;"	v
+temp_c	app/controllers/taps/index.php	/^      $temp_c = round(($temp_f-32) * (5\/9));$/;"	v
+temp_c	app/controllers/taps/index.php	/^    $temp_c = 0;$/;"	v
+temp_f	app/controllers/taps/index.php	/^      $temp_f = intval($data->wind->chill);$/;"	v
+temp_f	app/controllers/taps/index.php	/^    $temp_f = 0;$/;"	v
+twitter	lib/twitter-api/index.php	/^$twitter = new TwitterAPIExchange($settings);$/;"	v
+update	kissmvc_core.php	/^  function update() {$/;"	f
+url	lib/twitter-api/TwitterAPIExchange.php	/^        $this->url = $url;$/;"	v
+url	lib/twitter-api/TwitterAPIExchange.php	/^    public $url;$/;"	v
+url	lib/twitter-api/index.php	/^$url = 'https:\/\/api.twitter.com\/1.1\/blocks\/create.json';$/;"	v
+url	lib/twitter-api/index.php	/^$url = 'https:\/\/api.twitter.com\/1.1\/followers\/ids.json';$/;"	v
+values	lib/twitter-api/TwitterAPIExchange.php	/^        $values = array();$/;"	v
+vars	kissmvc_core.php	/^      $this->vars=$vars;$/;"	v
+vars	kissmvc_core.php	/^      $this->vars=array_merge($this->vars,$vars);$/;"	v
+vars	kissmvc_core.php	/^  protected $vars=array();$/;"	v
+web_folder	kissmvc_core.php	/^    $this->web_folder=$web_folder;$/;"	v
+web_folder	kissmvc_core.php	/^  protected $web_folder='\/'; \/\/with trailing slash$/;"	v
+will	kissmvc_core.php	/^  \/\/if checkdb is set to true, this function will return true if there exists such a record in the database$/;"	f
