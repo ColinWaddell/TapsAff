@@ -39,13 +39,28 @@ function retrieve_taps_status($location){
       $temp_c = round(($temp_f-32) * (5/9));
     }
     
-    $status = ($temp_f > $GLOBALS['taps_temp'] ) ? 'aff' : 'oan';
+    $status = '';
+    $message = '';
+
+$temp_f = $GLOBALS['taps_temp']  -3 ;
+
+    if ($temp_f > $GLOBALS['taps_temp']){
+      $status = 'aff';
+    }
+    else if ($temp_f > $GLOBALS['taps_temp'] - 5){
+      $status = 'oan';
+      $message = "...but only by a bawhair!";
+    }
+    else{
+      $status = 'oan';
+    }
 
     $json_local = json_encode (
                     array (
                       'temp_f'   => $temp_f,
                       'temp_c'   => $temp_c,
                       'taps'     => $status,
+                      'message'  => $message,
                       'datetime' => $current_datetime->format('Y-m-d H:i:s'),
                       'lifespan' => $GLOBALS['json_lifespan'],
                       'location' => $location,
@@ -61,6 +76,7 @@ function retrieve_taps_status($location){
                       'temp_f'   => 0,
                       'temp_c'   => 0,
                       'taps' => 'error', 
+                      'message'  => '',
                       'datetime' => $current_datetime->format('Y-m-d H:i:s'),
                       'lifespan' => $GLOBALS['json_lifespan'],
                       'location' => $GLOBALS['default_location'],
