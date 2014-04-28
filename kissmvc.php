@@ -12,17 +12,11 @@ class Controller extends KISS_Controller {
     //you can define custom routes using PHP code
     $this->params = array();
     $p = $this->request_uri_parts;
-    if (isset($p[0]) && $p[0]=='welcome') {
-      $this->controller='main';
-      $this->action='greet';
-      if (isset($p[1]))
-        $this->params=array_slice($p,1);
-    }
-    elseif (isset($p[0]) && $p[0]=='xxx') {
-      $this->controller='this';
-      $this->action='that';
-      if (isset($p[1]))
-        $this->params=array_slice($p,1);
+
+    if(isset($p[0])){
+      $this->controller='taps';
+      $this->action='index';
+      $this->params=array_slice($p,0);
     }
     else
       parent::parse_http_request(); //doesn't match any custom routes, so parse it as per normal

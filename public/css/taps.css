@@ -57,6 +57,11 @@ h3.site-purpose{
   padding-bottom: 30px;
 }
 
+h3.sub-message{
+  padding: 40px 0;
+  font-style: italic;
+}
+
 a{
   text-decoration: none;
   color: rgb(255, 189, 189);
@@ -82,6 +87,7 @@ a:hover {
   padding-bottom: 15px;
   text-shadow:0 4px 10px #AAA;
   color:#111;
+  line-height: 1.1em;
 }
 
 .taps-definition {
@@ -142,6 +148,7 @@ span.taps-error { color:#333;  }
   margin: 20px 0;
   padding: 5px;
   min-height: 60px;
+  border: 0;
 }
 
 span.info-title{
@@ -154,7 +161,74 @@ span.info-value{
     display: block;
 }
 
-@media only screen and (max-width: 767px) and (min-width: 480px){
+div#location-entry{
+  background: #fff;
+  padding: 20px 0;
+  font-style: italic;
+  border: 0;
+}
+
+input#location{
+  width: 100%;
+  text-align: center;
+  padding: 9px 0px 4px 0px;
+  font-size: 20px;
+  line-height: 36px;
+  height: 53px;
+  border-radius: 0px;
+  outline: none;
+  border: none;
+  padding: 0;
+  background-color: #fff;
+  border: 1px solid #EEE;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+
+/*input#location.notfound{*/
+ /*background-color: #FF5454;*/
+/*color: #000;*/
+/*}*/
+
+/*input#location.notfound:focus{*/
+  /*background-color: #fff;*/
+ /*-webkit-transition: background-color 100ms linear;*/
+ /*-moz-transition: background-color 100ms linear;*/
+ /*-o-transition: background-color 100ms linear;*/
+ /*-ms-transition: background-color 100ms linear;*/
+ /*transition: background-color 100ms linear;*/
+/*}*/
+
+div#share p{
+  font-size: 30px;
+  font-weight: 300;
+  text-align: right;
+}
+
+div#share a.social-media{
+  text-align: left;
+  text-indent: -5000px;
+  width: 30px;
+  height:30px;
+  display: inline-block;
+}
+
+div#share a.social-media.facebook{
+  background:url('../img/socialmedia.png');
+  background-position-x: 60px;
+}
+
+div#share a.social-media.twitter{
+  background:url('../img/socialmedia.png');
+}
+
+div#share a.social-media.google{
+  background:url('../img/socialmedia.png');
+  background-position-x: 30px;
+}
+
+@media only screen and (max-width: 767px){
   #moreinfo > .container > div > section > .container > .columns{
     margin: 5px 0;              
   }
@@ -163,8 +237,8 @@ span.info-value{
     padding-top: 20px;
   }
 
-  .taps-message {
-    line-height: 1.1em;
+  div#share{
+    display: none;
   }
 
 }
@@ -176,5 +250,4 @@ span.info-value{
     padding-top:0;
     right:10px;
   }
-
 }

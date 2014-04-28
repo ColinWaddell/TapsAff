@@ -33,16 +33,22 @@ require('kissmvc.php');
 //===============================================
 // Session
 //===============================================
+//===============================================
+// Session
+//===============================================
+ini_set('session.use_cookies', 1);
+ini_set('session.use_only_cookies', 1);
 session_start();
 
 //===============================================
 // Globals
 //===============================================
-$GLOBALS['sitename']='Glasgow, Taps-Aff or Taps-Oan?';
+$GLOBALS['sitename']='Taps-Aff or Taps-Oan?';
 $GLOBALS['json_local']=getcwd().'/taps.json';
-$GLOBALS['json_url']='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20location%3D%22UKXX0061%22&format=json';
+$GLOBALS['json_url']='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20location%20in%0A%20%20%20(select%20id%20from%20xml%20where%0A%20%20%20%20url%3D%22http%3A%2F%2Fxoap.weather.com%2Fsearch%2Fsearch%3Fwhere%3DLOCATION,UK%22%0A%20%20%20%20and%20itemPath%3D%22search.loc%22)%0A&diagnostics=true&format=json';
 $GLOBALS['taps_temp'] = 63;
 $GLOBALS['json_lifespan'] = '+15 minutes';
+$GLOBALS['default_location'] = 'Glasgow';
 
 //===============================================
 // Functions

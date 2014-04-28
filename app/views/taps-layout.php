@@ -3,10 +3,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <base href="<?php echo myUrl('',true)?>" />
-<title><?php echo $GLOBALS['sitename']?></title>
+<title>
+  <?php echo $location.', '.$GLOBALS['sitename']?>
+</title>
 
 <meta property="og:url" content="<?php echo myUrl('',true)?>"/> 
-<meta property="og:title" content="Glasgow, taps-aff or taps-oan?"/> 
+<meta property="og:title" content="<?php echo $location.', '.$GLOBALS['sitename'] ?>"/> 
 <meta property="og:image" content="<?php echo myUrl('',true)?>/public/img/logo.png"/>
 <meta property="fb:admins" content="732492372" />
 
@@ -16,7 +18,7 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" id="taps-style"  href="<?php echo myUrl('public/css/taps.css',true)?>" type="text/css" media="all" />
+<link rel="stylesheet" id="taps-style"  href="<?php echo myUrl('public/css/taps.css?forceload',true)?>" type="text/css" media="all" />
 <link rel="stylesheet" id="skeleton-framework"  href="<?php echo myUrl('public/css/skeleton.css',true)?>" type="text/css" media="all" />
 
 <script type="text/javascript">
@@ -52,11 +54,26 @@ _gaq.push(["_trackPageview"]);
     </div> <!-- container -->
   </div> <!-- maincontent -->
 
+  <div id="location-entry">
+    <div class="container">
+      <div class="columns offset-by-three ten alpha">
+        <?php
+          if (isset($search) && is_array($search)):
+            foreach ($search as $entry): ?>
+              <section>
+                <?php echo "$entry\n"; ?>
+              </section>
+            <?php endforeach; 
+          endif
+        ?>
+      </div>
+    </div>
+  </div>
     
   <div id="moreinfo">
 
     <div class="container">
-      <div class="columns offset-by-two twelve alpha">
+      <div class="columns sixteen alpha omega">
         <?php
           if (isset($moreinfo) && is_array($moreinfo)):
             foreach ($moreinfo as $entry): ?>
