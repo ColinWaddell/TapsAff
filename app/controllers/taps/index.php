@@ -42,7 +42,6 @@ function retrieve_taps_status($location){
     $status = '';
     $message = '';
 
-$temp_f = $GLOBALS['taps_temp']  -3 ;
 
     if ($temp_f > $GLOBALS['taps_temp']){
       $status = 'aff';
