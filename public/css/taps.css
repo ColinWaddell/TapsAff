@@ -216,7 +216,7 @@ div#share a.social-media{
 
 div#share a.social-media.facebook{
   background:url('../img/socialmedia.png');
-  background-position-x: 60px;
+  background-position: 60px 0px;
 }
 
 div#share a.social-media.twitter{
@@ -225,7 +225,7 @@ div#share a.social-media.twitter{
 
 div#share a.social-media.google{
   background:url('../img/socialmedia.png');
-  background-position-x: 30px;
+  background-position: 30px 0px;
 }
 
 @media only screen and (max-width: 767px){
