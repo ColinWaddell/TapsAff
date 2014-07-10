@@ -94,7 +94,7 @@ function _index($location='') {
 
   $data['body'][]=View::do_fetch(VIEW_PATH.'taps/index.php',$data);
   $data['facebook'][]=View::do_fetch(VIEW_PATH.'facebook/index.php');
-  $data['search'][]=View::do_fetch(VIEW_PATH.'search/index.php',$data);
+  //$data['search'][]=View::do_fetch(VIEW_PATH.'search/index.php',$data);
   $data['moreinfo'][]=View::do_fetch(VIEW_PATH.'moreinfo/index.php', $data);
   $data['socialmedia'][]=View::do_fetch(VIEW_PATH.'socialmedia/index.php');
   View::do_dump(VIEW_PATH.'taps-layout.php',$data);	  
