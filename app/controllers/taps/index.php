@@ -9,7 +9,6 @@ function retrieve_taps_status($location){
   $current_datetime = new DateTime();
   $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
   $json_web = json_decode( @file_get_contents( build_query($location) ));
-
   
   $location = urldecode($location);
 
@@ -28,6 +27,7 @@ function retrieve_taps_status($location){
     $temp_f = 0;
     $temp_c = 0;
 
+//print_r($json_we);
     if ( is_array($json_web->query->results->channel) )
       $data = $json_web->query->results->channel[0];
     else

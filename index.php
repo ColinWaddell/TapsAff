@@ -45,7 +45,7 @@ session_start();
 //===============================================
 $GLOBALS['sitename']='Taps-Aff or Taps-Oan?';
 $GLOBALS['json_local']=getcwd().'/taps.json';
-$GLOBALS['json_url']='http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20location%20in%0A%20%20%20(select%20id%20from%20xml%20where%0A%20%20%20%20url%3D%22http%3A%2F%2Fxoap.weather.com%2Fsearch%2Fsearch%3Fwhere%3DLOCATION,UK%22%0A%20%20%20%20and%20itemPath%3D%22search.loc%22)%0A&diagnostics=true&format=json';
+$GLOBALS['json_url']='https://query.yahooapis.com/v1/public/yql?q=%0Aselect%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places%20where%20text%3D%22LOCATION%2CUK%22)&format=json&diagnostics=true&callback=';
 $GLOBALS['taps_temp'] = 62;
 $GLOBALS['json_lifespan'] = '+15 minutes';
 $GLOBALS['default_location'] = 'Glasgow';
