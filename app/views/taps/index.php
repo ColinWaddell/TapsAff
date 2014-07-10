@@ -1,6 +1,6 @@
 
 <div id="taps-text-area">
-  <h2 class="site-message"><?php echo $status->location; ?>, the weather is:</h2>
+  <h2 class="site-message"><span style='color: #D6163D; font-size: 34px;'><?php echo $status->location; ?></span>, the weather is:</h2>
 
     <p class="taps-message">taps
     <?php if (isset( $status->taps )): ?>

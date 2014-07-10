@@ -48,7 +48,7 @@ $GLOBALS['json_local']=getcwd().'/taps.json';
 $GLOBALS['json_url']='https://query.yahooapis.com/v1/public/yql?q=%0Aselect%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places%20where%20text%3D%22LOCATION%2CUK%22)&format=json&diagnostics=true&callback=';
 $GLOBALS['taps_temp'] = 62;
 $GLOBALS['json_lifespan'] = '+15 minutes';
-$GLOBALS['default_location'] = 'Glasgow';
+$GLOBALS['default_location'] = 'T in the Park';
 
 //===============================================
 // Functions

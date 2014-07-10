@@ -5,7 +5,8 @@ function build_query($location){
 }
 
 function retrieve_taps_status($location){
-  
+
+
   $current_datetime = new DateTime();
   $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
   $json_web = json_decode( @file_get_contents( build_query($location) ));
@@ -62,7 +63,7 @@ function retrieve_taps_status($location){
                       'message'  => $message,
                       'datetime' => $current_datetime->format('Y-m-d H:i:s'),
                       'lifespan' => $GLOBALS['json_lifespan'],
-                      'location' => $location,
+                      'location' => 'T in the Park',
                       'place_error' => (isset($place_error) ? $place_error : '')
                     ));
 
@@ -86,33 +87,17 @@ function retrieve_taps_status($location){
 
 
 function _index($location='') {
+  $location = 'T in the Park';
+  $data['location'] = $location;
+  $data['status']=retrieve_taps_status('Balado');
+  //$_SESSION['location'] = $data['status']->location;
 
-  if (strpos($location,'?location=') !== false)
-  {
-    $data['location'] = str_replace('?location=', '', $location);;
-    View::do_dump(VIEW_PATH.'taps-redirect.php',$data);	  
-  }
-  else
-  {
-    if (isset($_SESSION['location']) && ($location=='') )
-      $location = $_SESSION['location'];
-    elseif ($location=='')
-      $location = $GLOBALS['default_location'];
-
-    $location = str_replace(" ","+",$location);
-    $location = ucwords($location);
-
-    $data['location'] = $location;
-    $data['status']=retrieve_taps_status($location);
-    $_SESSION['location'] = $data['status']->location;
-
-    $data['body'][]=View::do_fetch(VIEW_PATH.'taps/index.php',$data);
-    $data['facebook'][]=View::do_fetch(VIEW_PATH.'facebook/index.php');
-    $data['search'][]=View::do_fetch(VIEW_PATH.'search/index.php',$data);
-    $data['moreinfo'][]=View::do_fetch(VIEW_PATH.'moreinfo/index.php', $data);
-    $data['socialmedia'][]=View::do_fetch(VIEW_PATH.'socialmedia/index.php');
-    View::do_dump(VIEW_PATH.'taps-layout.php',$data);	  
-  }
+  $data['body'][]=View::do_fetch(VIEW_PATH.'taps/index.php',$data);
+  $data['facebook'][]=View::do_fetch(VIEW_PATH.'facebook/index.php');
+  $data['search'][]=View::do_fetch(VIEW_PATH.'search/index.php',$data);
+  $data['moreinfo'][]=View::do_fetch(VIEW_PATH.'moreinfo/index.php', $data);
+  $data['socialmedia'][]=View::do_fetch(VIEW_PATH.'socialmedia/index.php');
+  View::do_dump(VIEW_PATH.'taps-layout.php',$data);	  
 
 }
 
