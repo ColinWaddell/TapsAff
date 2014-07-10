@@ -1,6 +1,6 @@
 <?php if (isset( $status->taps )): ?>
 
-    <h3 class="site-purpose">An automated service; keeping the <?php echo $status->location; ?> public informed.</h3>
+    <h3 class="site-purpose">An automated service; keeping <span style='color: #D6163D'><?php echo $status->location; ?></span> informed.</h3>
 
     <div class="container columns offset-by-two twelve alpha">
 
