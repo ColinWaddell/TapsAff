@@ -3,4 +3,4 @@ taps.json
 *.psd
 *.svg
 .htaccess
-
+php_errors.log
