@@ -8,11 +8,12 @@ function retrieve_taps_status($location){
   
   $current_datetime = new DateTime();
   $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
-  $json_web = json_decode( @file_get_contents( build_query($location) ));
+  $json_web = json_decode( file_get_contents( build_query($location), false, stream_context_create($GLOBALS['sslContextOptions']) ) );
   
   $location = urldecode($location);
 
   if (isset( $json_web->query ) ){
+    
     if ($json_web->query->count == 0)
     {
       $place_error = 'Location \''.$location.'\' unknown.';

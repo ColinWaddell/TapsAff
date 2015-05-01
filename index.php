@@ -15,7 +15,7 @@ error_reporting(E_ALL);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 
-define('WEB_DOMAIN','http://colinwaddell-mbp.local'); //with http:// and NO trailing slash pls
+define('WEB_DOMAIN','http://colins-mbp.home'); //with http:// and NO trailing slash pls
 define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
 
 //define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
@@ -31,8 +31,15 @@ date_default_timezone_set('Europe/London'); //Sorts out daylight savings
 require('kissmvc.php');
 
 //===============================================
-// Session
+// SSL Hack
 //===============================================
+$arrContextOptions=array(
+    "ssl"=>array(
+        "verify_peer"=>false,
+        "verify_peer_name"=>false,
+    ),
+);  
+
 //===============================================
 // Session
 //===============================================
@@ -45,10 +52,16 @@ session_start();
 //===============================================
 $GLOBALS['sitename']='Taps-Aff or Taps-Oan?';
 $GLOBALS['json_local']=getcwd().'/taps.json';
-$GLOBALS['json_url']='https://query.yahooapis.com/v1/public/yql?q=%0Aselect%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places%20where%20text%3D%22LOCATION%2CUK%22)&format=json&diagnostics=true&callback=';
+$GLOBALS['json_url']='https://query.yahooapis.com/v1/public/yql?q=%0Aselect%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places%20where%20text%3D%22LOCATION%2CUK%22)&format=json';
 $GLOBALS['taps_temp'] = 62;
 $GLOBALS['json_lifespan'] = '+15 minutes';
 $GLOBALS['default_location'] = 'Glasgow';
+$GLOBALS['sslContextOptions'] = array(
+                                  "ssl"=>array(
+                                      "verify_peer"=>false,
+                                      "verify_peer_name"=>false,
+                                  ),
+                                );  
 
 //===============================================
 // Functions
