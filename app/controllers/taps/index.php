@@ -28,7 +28,6 @@ function retrieve_taps_status($location){
     $temp_f = 0;
     $temp_c = 0;
 
-//print_r($json_we);
     if ( is_array($json_web->query->results->channel) )
       $data = $json_web->query->results->channel[0];
     else
@@ -43,7 +42,6 @@ function retrieve_taps_status($location){
     $status = '';
     $message = '';
     $location = $data->location->city;
-
 
     if ($temp_f > $GLOBALS['taps_temp']){
       $status = 'aff';
@@ -104,9 +102,9 @@ function _index($location='') {
     $location = str_replace(" ","+",$location);
     $location = ucwords($location);
 
-    $data['location'] = $location;
     $data['status']=retrieve_taps_status($location);
     $_SESSION['location'] = $data['status']->location;
+    $data['location'] = $data['status']->location;
 
     $data['body'][]=View::do_fetch(VIEW_PATH.'taps/index.php',$data);
     $data['facebook'][]=View::do_fetch(VIEW_PATH.'facebook/index.php');
