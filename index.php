@@ -15,8 +15,8 @@ error_reporting(E_ALL);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 
-// define('WEB_DOMAIN','http://colins-mbp.home'); //with http:// and NO trailing slash pls
-// define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
+//define('WEB_DOMAIN','http://tapsaff.colinwaddell.com'); //with http:// and NO trailing slash pls
+//define('WEB_FOLDER','/'); //with trailing slash pls
 
 define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
 define('WEB_FOLDER','/'); //with trailing slash pls
@@ -52,7 +52,7 @@ session_start();
 //===============================================
 $GLOBALS['sitename']='Taps-Aff or Taps-Oan?';
 $GLOBALS['json_local']=getcwd().'/taps.json';
-$GLOBALS['json_url']='https://query.yahooapis.com/v1/public/yql?q=%0Aselect%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places%20where%20text%3D%22LOCATION%2CUK%22)&format=json';
+$GLOBALS['json_url']='https://query.yahooapis.com/v1/public/yql?q=%0Aselect%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places%20where%20text%3D%22LOCATION%2CGB%22)&format=json';
 $GLOBALS['taps_temp'] = 62;
 $GLOBALS['json_lifespan'] = '+15 minutes';
 $GLOBALS['default_location'] = 'Glasgow';

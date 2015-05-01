@@ -42,6 +42,7 @@ function retrieve_taps_status($location){
     
     $status = '';
     $message = '';
+    $location = $data->location->city;
 
 
     if ($temp_f > $GLOBALS['taps_temp']){
