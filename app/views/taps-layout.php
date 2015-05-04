@@ -7,6 +7,8 @@
   <?php echo $location.', '.$GLOBALS['sitename']?>
 </title>
 
+<link rel="shortcut icon" href="/favicon.ico?v=2" />
+
 <meta property="og:url" content="<?php echo myUrl('',true)?>"/> 
 <meta property="og:title" content="<?php echo $location.', '.$GLOBALS['sitename'] ?>"/> 
 <meta property="og:image" content="<?php echo myUrl('',true)?>/public/img/logo.png"/>
