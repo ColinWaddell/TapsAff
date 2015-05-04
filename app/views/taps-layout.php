@@ -7,7 +7,14 @@
   <?php echo $location.', '.$GLOBALS['sitename']?>
 </title>
 
-<link rel="shortcut icon" href="/favicon.ico?v=2" />
+<link rel="shortcut icon" href="<?php 
+  if (isset( $status->taps )){
+    echo myUrl('/public/img/favicon_'.$status->taps.'.ico',true);
+  }
+  else{
+    echo myUrl('/public/img/favicon_error.ico',true);
+  }
+?>" />
 
 <meta property="og:url" content="<?php echo myUrl('',true)?>"/> 
 <meta property="og:title" content="<?php echo $location.', '.$GLOBALS['sitename'] ?>"/> 
