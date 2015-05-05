@@ -21,7 +21,7 @@
 <meta property="og:image" content="<?php echo myUrl('',true)?>/public/img/logo.png"/>
 <meta property="fb:admins" content="732492372" />
 
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 <!--[if lt IE 9]>
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
