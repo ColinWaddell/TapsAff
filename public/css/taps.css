@@ -125,8 +125,9 @@ span.taps-error { color:#333;  }
   padding-bottom: 5px;
 }
 
-#store-button{
-  padding-top:20px;
+.message-button{
+  padding-top:35px;
+  padding-bottom:35px;
 }
 
 
@@ -244,10 +245,11 @@ div#share a.social-media.google{
 }
 
 @media (min-width: 767px){
-  #store-button{
+  #themessages{
     position: fixed;
     top:10px;
     padding-top:0;
     right:10px;
+    width: 150px;
   }
 }

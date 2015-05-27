@@ -15,8 +15,8 @@ error_reporting(E_ALL);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 
-//define('WEB_DOMAIN','http://tapsaff.colinwaddell.com'); //with http:// and NO trailing slash pls
-//define('WEB_FOLDER','/'); //with trailing slash pls
+//define('WEB_DOMAIN','http://colins-mbp.home'); //with http:// and NO trailing slash pls
+//define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
 
 define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
 define('WEB_FOLDER','/'); //with trailing slash pls
