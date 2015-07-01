@@ -44,8 +44,6 @@ function retrieve_taps_status($location){
     $message = '';
     $location = $data->location->city;
 
-    $data->item->condition->code = "3";
-
     if (in_array(intval($data->item->condition->code), $GLOBALS['terrible_weather'])){
       $status = 'oan';
     }
