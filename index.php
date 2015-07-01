@@ -15,11 +15,11 @@ error_reporting(E_ALL);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 
-//define('WEB_DOMAIN','http://colins-mbp.home'); //with http:// and NO trailing slash pls
-//define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
+define('WEB_DOMAIN','http://localhost'); //with http:// and NO trailing slash pls
+define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
 
-define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
-define('WEB_FOLDER','/'); //with trailing slash pls
+//define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
+//define('WEB_FOLDER','/'); //with trailing slash pls
 
 define('VIEW_PATH','app/views/'); //with trailing slash pls
 
@@ -62,6 +62,47 @@ $GLOBALS['sslContextOptions'] = array(
                                       "verify_peer_name"=>false,
                                   ),
                                 );  
+
+// List of codes of non-aff weather
+$GLOBALS['terrible_weather'] = array( 
+  0,   // tornado
+  1,   // tropical storm
+  2,   // hurricane
+  3,   // severe thunderstorms
+  4,   // thunderstorms
+  5,   // mixed rain and snow
+  6,   // mixed rain and sleet
+  7,   // mixed snow and sleet
+  8,   // freezing drizzle
+  9,   // drizzle
+  10,  // freezing rain
+  11,  // showers
+  12,  // showers
+  13,  // snow flurries
+  14,  // light snow showers
+  15,  // blowing snow
+  16,  // snow
+  17,  // hail
+  18,  // sleet
+  19,  // dust
+  20,  // foggy
+  21,  // haze
+  22,  // smoky
+  25,  // cold
+  35,  // mixed rain and hail
+  36,  // hot
+  37,  // isolated thunderstorms
+  38,  // scattered thunderstorms
+  39,  // scattered thunderstorms
+  40,  // scattered showers
+  41,  // heavy snow
+  42,  // scattered snow showers
+  43,  // heavy snow
+  45,  // thundershowers
+  46,  // snow showers
+  47  // isolated thundershowers
+);
+
 
 //===============================================
 // Functions

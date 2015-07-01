@@ -1,11 +1,12 @@
 <?php
 
+
 function build_query($location){
   return str_replace('LOCATION', urlencode($location), $GLOBALS['json_url']);
 }
 
 function retrieve_taps_status($location){
-  
+
   $current_datetime = new DateTime();
   $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
   $json_web = json_decode( file_get_contents( build_query($location), false, stream_context_create($GLOBALS['sslContextOptions']) ) );
@@ -43,7 +44,12 @@ function retrieve_taps_status($location){
     $message = '';
     $location = $data->location->city;
 
-    if ($temp_f > $GLOBALS['taps_temp']){
+    $data->item->condition->code = "3";
+
+    if (in_array(intval($data->item->condition->code), $GLOBALS['terrible_weather'])){
+      $status = 'oan';
+    }
+    else if ($temp_f > $GLOBALS['taps_temp']){
       $status = 'aff';
     }
     else if ($temp_f > $GLOBALS['taps_temp'] - 5){
