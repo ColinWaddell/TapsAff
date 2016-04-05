@@ -10,7 +10,6 @@ function retrieve_taps_status($location){
   $current_datetime = new DateTime();
   $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
   $json_web = json_decode( file_get_contents( build_query($location), false, stream_context_create($GLOBALS['sslContextOptions']) ) );
-  
   $location = urldecode($location);
 
   if (isset( $json_web->query ) ){
@@ -24,7 +23,7 @@ function retrieve_taps_status($location){
   }
 
   // Have to test json file was found ok
-  if (isset( $json_web->query ))
+  if (isset( $json_web->query) && !is_null($json_web->query->results))
   {
     $temp_f = 0;
     $temp_c = 0;
