@@ -117,9 +117,6 @@ _gaq.push(["_trackPageview"]);
             <a target="_blank" href="http://www.zazzle.co.uk/TapsAff"><img src="public/img/Store-Badge.png" alt="" width="150" height="150" /></a> 
           </div>
           <div class="message-button">
-             <a target="_blank" href="http://www.mugstock.org"><img src="public/img/mugstock_badge.png" alt="MugStock Festival of Music and Merriment" width="150" height="122" /></a> 
-          </div>
-          <div class="message-button">
              <a target="_blank" href="http://www.gearbikes.com"><img src="public/img/gearbikes_badge.png" alt="Gear Bikes - Glasgow West-end Cycle Bike Store" width="150" height="150" /></a> 
           </div>
       </div>

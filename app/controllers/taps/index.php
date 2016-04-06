@@ -10,21 +10,19 @@ function retrieve_taps_status($location){
   $current_datetime = new DateTime();
   $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
   $json_web = json_decode( file_get_contents( build_query($location), false, stream_context_create($GLOBALS['sslContextOptions']) ) );
-  
   $location = urldecode($location);
-
   if (isset( $json_web->query ) ){
-    
+
     if ($json_web->query->count == 0)
     {
       $place_error = 'Location \''.$location.'\' unknown.';
-      $location = isset($_SESSION['location']) ? $_SESSION['location'] : $GLOBALS['default_location']; 
+      $location = isset($_SESSION['location']) ? $_SESSION['location'] : $GLOBALS['default_location'];
       $json_web = json_decode( @file_get_contents( build_query($location) ));
     }
   }
 
   // Have to test json file was found ok
-  if (isset( $json_web->query ))
+  if (isset( $json_web->query) && !is_null($json_web->query->results))
   {
     $temp_f = 0;
     $temp_c = 0;
@@ -39,7 +37,7 @@ function retrieve_taps_status($location){
       $temp_f = intval($data->wind->chill);
       $temp_c = round(($temp_f-32) * (5/9));
     }
-    
+
     $status = '';
     $message = '';
     $location = $data->location->city;
@@ -74,11 +72,11 @@ function retrieve_taps_status($location){
     // Doing foreach would be quicker, but this is neater.
     return json_decode( $json_local );
   } else return json_decode (
-                  json_encode ( 
-                    array ( 
+                  json_encode (
+                    array (
                       'temp_f'   => 0,
                       'temp_c'   => 0,
-                      'taps' => 'error', 
+                      'taps' => 'error',
                       'message'  => '',
                       'datetime' => $current_datetime->format('Y-m-d H:i:s'),
                       'lifespan' => $GLOBALS['json_lifespan'],
@@ -94,7 +92,7 @@ function _index($location='') {
   if (strpos($location,'?location=') !== false)
   {
     $data['location'] = str_replace('?location=', '', $location);;
-    View::do_dump(VIEW_PATH.'taps-redirect.php',$data);	  
+    View::do_dump(VIEW_PATH.'taps-redirect.php',$data);
   }
   else
   {
@@ -115,8 +113,7 @@ function _index($location='') {
     $data['search'][]=View::do_fetch(VIEW_PATH.'search/index.php',$data);
     $data['moreinfo'][]=View::do_fetch(VIEW_PATH.'moreinfo/index.php', $data);
     $data['socialmedia'][]=View::do_fetch(VIEW_PATH.'socialmedia/index.php');
-    View::do_dump(VIEW_PATH.'taps-layout.php',$data);	  
+    View::do_dump(VIEW_PATH.'taps-layout.php',$data);
   }
 
 }
-
