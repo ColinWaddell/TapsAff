@@ -9,7 +9,8 @@ function retrieve_taps_status($location){
 
   $current_datetime = new DateTime();
   $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
-  $json_web = json_decode( file_get_contents( build_query($location), false, stream_context_create($GLOBALS['sslContextOptions']) ) );
+  $json_web = getJson_cache(build_query($location));
+
   $location = urldecode($location);
   if (isset( $json_web->query ) ){
 
