@@ -4,3 +4,4 @@ taps.json
 *.svg
 .htaccess
 php_errors.log
+cache/
