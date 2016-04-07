@@ -64,7 +64,6 @@ function retrieve_taps_status($location){
                       'taps'     => $status,
                       'message'  => $message,
                       'datetime' => $current_datetime->format('Y-m-d H:i:s'),
-                      'lifespan' => $GLOBALS['json_lifespan'],
                       'location' => $location,
                       'place_error' => (isset($place_error) ? $place_error : '')
                     ));
