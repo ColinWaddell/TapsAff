@@ -55,8 +55,7 @@ $GLOBALS['sitename']='Taps-Aff or Taps-Oan?';
 $GLOBALS['json_local']=getcwd().'/taps.json';
 $GLOBALS['json_url']= 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22LOCATION%2Cuk%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
 $GLOBALS['json_cache_window']='-5 minutes';
-$GLOBALS['taps_temp'] = 65; //should be 62
-$GLOBALS['json_lifespan'] = '+15 minutes';
+$GLOBALS['taps_temp'] = 62; //should be 62
 $GLOBALS['default_location'] = 'Glasgow';
 $GLOBALS['sslContextOptions'] = array(
                                   "ssl"=>array(
