@@ -74,7 +74,6 @@ function retrieve_taps_status($location){
                       'message'     => $message,
                       'description' => $weather_description,
                       'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
-                      'lifespan'    => $GLOBALS['json_lifespan'],
                       'location'    => $location,
                       'place_error' => (isset($place_error) ? $place_error : '')
                     ));
@@ -91,7 +90,6 @@ function retrieve_taps_status($location){
                       'message'     => '',
                       'description' => '',
                       'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
-                      'lifespan'    => $GLOBALS['json_lifespan'],
                       'location'    => $GLOBALS['default_location'],
                       'place_error' => 'Can\'t find location'
                     ))); // error - couldn't query internet
