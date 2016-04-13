@@ -61,7 +61,8 @@ function retrieve_taps_status($location){
     }
 
     /* Check if there's a weather description */
-    if($weather_code >= 0 && < sizeof($GLOBALS['weather_description'])){
+    if($weather_code >= 0 &&
+        $weather_code < sizeof($GLOBALS['weather_description'])){
       $weather_description = $GLOBALS['weather_description'][$weather_code];
     }
 

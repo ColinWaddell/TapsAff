@@ -15,11 +15,11 @@ error_reporting(E_ALL);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 
-// define('WEB_DOMAIN','http://localhost'); //with http:// and NO trailing slash pls
-// define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
+define('WEB_DOMAIN','http://localhost'); //with http:// and NO trailing slash pls
+define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
 
-define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
-define('WEB_FOLDER','/'); //with trailing slash pls
+// define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
+// define('WEB_FOLDER','/'); //with trailing slash pls
 
 define('VIEW_PATH','app/views/'); //with trailing slash pls
 
@@ -106,54 +106,54 @@ $GLOBALS['terrible_weather'] = array(
 );
 
 $GLOBALS['weather_description'] = array(
-  "mental", //tornado
-  "mental", //tropical storm
-  "mental", //hurricane
-  "radge", //severe thunderstorms
-  "radge", //thunderstorms
-  "boggin'", //mixed rain and snow
-  "boggin'", //mixed rain and sleet
-  "boggin'", //mixed snow and sleet
-  "dreich", //freezing drizzle
-  "pish", //drizzle
-  "dreich", //freezing rain
-  "pishin' it", //showers
-  "pishin' it", //showers
-  "baltic", //snow flurries
-  "baltic", //light snow showers
-  "baltic", //blowing snow
-  "baltic", //snow
-  "baws", //hail
-  "bowfin", //sleet
-  "stoory", //dust
-  "misty", //foggy
-  "misty", //haze
-  "misty", //smoky
-  "blawin'", //blustery
-  "mental", //windy
-  "baltic", //cold
-  "awright", //cloudy
-  "awright", //mostly cloudy (night)
-  "awright", //mostly cloudy (day)
-  "awright", //partly cloudy (night)
-  "awright", //partly cloudy (day)
-  "awright", //clear (night)
-  "braw", //sunny
-  "awright", //fair (night)
-  "awright", //fair (day)
-  "mental", //mixed rain and hail
-  "sweltrin'", //hot
-  "hackit", //isolated thunderstorms
-  "hackit", //scattered thunderstorms
-  "hackit", //scattered thunderstorms
-  "pish", //scattered showers
-  "baltic", //heavy snow
-  "baltic", //scattered snow showers
-  "mingin'", //heavy snow
-  "awright", //partly cloudy
-  "boggin'", //thundershowers
-  "mingin'", //snow showers
-  "mingin'"  //isolated thundershowers
+  "Mental", //  0 - tornado
+  "Mental", //  1 - tropical storm
+  "Mental", //  2 - hurricane
+  "Radge", //  3 - severe thunderstorms
+  "Radge", //  4 - thunderstorms
+  "Boggin'", //  5 - mixed rain and snow
+  "Boggin'", //  6 - mixed rain and sleet
+  "Boggin'", //  7 - mixed snow and sleet
+  "Dreich", //  8 - freezing drizzle
+  "Pish", //  9 - drizzle
+  "Dreich", // 10 - freezing rain
+  "Pish", // 11 - showers
+  "Pish", // 12 - showers
+  "Baltic", // 13 - snow flurries
+  "Baltic", // 14 - light snow showers
+  "Baltic", // 15 - blowing snow
+  "Baltic", // 16 - snow
+  "Bowfin", // 17 - hail
+  "Bowfin", // 18 - sleet
+  "Stoory", // 19 - dust
+  "Misty", // 20 - foggy
+  "Misty", // 21 - haze
+  "Misty", // 22 - smoky
+  "Blawin'", // 23 - blustery
+  "Mental", // 24 - windy
+  "Baltic", // 25 - cold
+  "Awright", // 26 - cloudy
+  "Awright", // 27 - mostly cloudy (night)
+  "Awright", // 28 - mostly cloudy (day)
+  "Awright", // 29 - partly cloudy (night)
+  "Awright", // 30 - partly cloudy (day)
+  "Awright", // 31 - clear (night)
+  "Braw", // 32 - sunny
+  "Awright", // 33 - fair (night)
+  "Awright", // 34 - fair (day)
+  "Mental", // 35 - mixed rain and hail
+  "Sweltrin'", // 36 - hot
+  "Hackit", // 37 - isolated thunderstorms
+  "Hackit", // 38 - scattered thunderstorms
+  "Pish", // 39 - scattered showers
+  "Pish", // 40 - scattered showers
+  "Baltic", // 41 - heavy snow
+  "Baltic", // 42 - scattered snow showers
+  "Mingin'", // 43 - heavy snow
+  "Awright", // 44 - partly cloudy
+  "Boggin'", // 45 - thundershowers
+  "Mingin'", // 46 - snow showers
+  "Mingin'"  // 47 - isolated thundershowers
 );
 
 //===============================================

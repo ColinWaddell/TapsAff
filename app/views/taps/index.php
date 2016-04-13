@@ -36,7 +36,7 @@
         <br /><br />
         <span class="b">Antonym:</span> Taps-Oan, "tops on".
         <br /><br />
-        <span class="b">Current Weather:</span> <?php echo $status->weather_description; ?>
+        <span class="b">Current Weather:</span> <?php echo $status->description; ?>
         <br /><br />
         <span class="b">Temperature:</span> <?php echo $status->temp_c; ?>&deg;C (<?php echo $status->temp_f; ?>&deg;F)
       </p>
