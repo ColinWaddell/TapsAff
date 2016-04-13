@@ -41,9 +41,12 @@ function retrieve_taps_status($location){
 
     $status = '';
     $message = '';
+    $weather_description = '';
     $location = $data->location->city;
+    $weather_code = intval($data->item->condition->code);
 
-    if (in_array(intval($data->item->condition->code), $GLOBALS['terrible_weather'])){
+    /* Figure out taps status */
+    if (in_array($weather_code, $GLOBALS['terrible_weather'])){
       $status = 'oan';
     }
     else if ($temp_f > $GLOBALS['taps_temp']){
@@ -57,15 +60,21 @@ function retrieve_taps_status($location){
       $status = 'oan';
     }
 
+    /* Check if there's a weather description */
+    if($weather_code >= 0 && < sizeof($GLOBALS['weather_description'])){
+      $weather_description = $GLOBALS['weather_description'][$weather_code];
+    }
+
     $json_local = json_encode (
                     array (
-                      'temp_f'   => $temp_f,
-                      'temp_c'   => $temp_c,
-                      'taps'     => $status,
-                      'message'  => $message,
-                      'datetime' => $current_datetime->format('Y-m-d H:i:s'),
-                      'lifespan' => $GLOBALS['json_lifespan'],
-                      'location' => $location,
+                      'temp_f'      => $temp_f,
+                      'temp_c'      => $temp_c,
+                      'taps'        => $status,
+                      'message'     => $message,
+                      'description' => $weather_description,
+                      'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
+                      'lifespan'    => $GLOBALS['json_lifespan'],
+                      'location'    => $location,
                       'place_error' => (isset($place_error) ? $place_error : '')
                     ));
 
@@ -75,13 +84,14 @@ function retrieve_taps_status($location){
   } else return json_decode (
                   json_encode (
                     array (
-                      'temp_f'   => 0,
-                      'temp_c'   => 0,
-                      'taps' => 'error',
-                      'message'  => '',
-                      'datetime' => $current_datetime->format('Y-m-d H:i:s'),
-                      'lifespan' => $GLOBALS['json_lifespan'],
-                      'location' => $GLOBALS['default_location'],
+                      'temp_f'      => 0,
+                      'temp_c'      => 0,
+                      'taps'        => 'error',
+                      'message'     => '',
+                      'description' => '',
+                      'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
+                      'lifespan'    => $GLOBALS['json_lifespan'],
+                      'location'    => $GLOBALS['default_location'],
                       'place_error' => 'Can\'t find location'
                     ))); // error - couldn't query internet
 

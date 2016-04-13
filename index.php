@@ -105,6 +105,56 @@ $GLOBALS['terrible_weather'] = array(
   47  // isolated thundershowers
 );
 
+$GLOBALS['weather_description'] = array(
+  "mental", //tornado
+  "mental", //tropical storm
+  "mental", //hurricane
+  "radge", //severe thunderstorms
+  "radge", //thunderstorms
+  "boggin'", //mixed rain and snow
+  "boggin'", //mixed rain and sleet
+  "boggin'", //mixed snow and sleet
+  "dreich", //freezing drizzle
+  "pish", //drizzle
+  "dreich", //freezing rain
+  "pishin' it", //showers
+  "pishin' it", //showers
+  "baltic", //snow flurries
+  "baltic", //light snow showers
+  "baltic", //blowing snow
+  "baltic", //snow
+  "baws", //hail
+  "bowfin", //sleet
+  "stoory", //dust
+  "misty", //foggy
+  "misty", //haze
+  "misty", //smoky
+  "blawin'", //blustery
+  "mental", //windy
+  "baltic", //cold
+  "awright", //cloudy
+  "awright", //mostly cloudy (night)
+  "awright", //mostly cloudy (day)
+  "awright", //partly cloudy (night)
+  "awright", //partly cloudy (day)
+  "awright", //clear (night)
+  "braw", //sunny
+  "awright", //fair (night)
+  "awright", //fair (day)
+  "mental", //mixed rain and hail
+  "sweltrin'", //hot
+  "hackit", //isolated thunderstorms
+  "hackit", //scattered thunderstorms
+  "hackit", //scattered thunderstorms
+  "pish", //scattered showers
+  "baltic", //heavy snow
+  "baltic", //scattered snow showers
+  "mingin'", //heavy snow
+  "awright", //partly cloudy
+  "boggin'", //thundershowers
+  "mingin'", //snow showers
+  "mingin'"  //isolated thundershowers
+);
 
 //===============================================
 // Functions
