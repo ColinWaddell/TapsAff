@@ -123,13 +123,13 @@ $GLOBALS['weather_description'] = array(
   "Baltic", // 14 - light snow showers
   "Baltic", // 15 - blowing snow
   "Baltic", // 16 - snow
-  "Bowfin", // 17 - hail
-  "Bowfin", // 18 - sleet
+  "Boggin'", // 17 - hail
+  "Boggin'", // 18 - sleet
   "Stoory", // 19 - dust
   "Misty", // 20 - foggy
   "Misty", // 21 - haze
   "Misty", // 22 - smoky
-  "Blawin'", // 23 - blustery
+  "Blawy", // 23 - blustery
   "Mental", // 24 - windy
   "Baltic", // 25 - cold
   "Awright", // 26 - cloudy
@@ -149,11 +149,11 @@ $GLOBALS['weather_description'] = array(
   "Pish", // 40 - scattered showers
   "Baltic", // 41 - heavy snow
   "Baltic", // 42 - scattered snow showers
-  "Mingin'", // 43 - heavy snow
+  "Baltic'", // 43 - heavy snow
   "Awright", // 44 - partly cloudy
   "Boggin'", // 45 - thundershowers
-  "Mingin'", // 46 - snow showers
-  "Mingin'"  // 47 - isolated thundershowers
+  "Baltic'", // 46 - snow showers
+  "Pish'"  // 47 - isolated thundershowers
 );
 
 //===============================================
