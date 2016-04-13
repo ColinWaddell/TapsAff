@@ -78,7 +78,7 @@ a:hover {
 
 #taps-text-area{
   font-family:'Open Sans', serif;
-  font-weight: 800;  
+  font-weight: 800;
 }
 
 .taps-message {
@@ -216,22 +216,25 @@ div#share a.social-media{
 }
 
 div#share a.social-media.facebook{
-  background:url('../img/socialmedia.png');
-  background-position: 60px 0px;
+  background:url('../img/socialmedia.svg');
+  background-position: 62px 0px;
+  background-repeat: repeat-x;
 }
 
 div#share a.social-media.twitter{
-  background:url('../img/socialmedia.png');
+  background:url('../img/socialmedia.svg');
+  background-repeat: repeat-x;
 }
 
 div#share a.social-media.google{
-  background:url('../img/socialmedia.png');
-  background-position: 30px 0px;
+  background:url('../img/socialmedia.svg');
+  background-position: 31px 0px;
+  background-repeat: repeat-x;
 }
 
 @media only screen and (max-width: 767px){
   #moreinfo > .container > div > section > .container > .columns{
-    margin: 5px 0;              
+    margin: 5px 0;
   }
 
   h2.site-message {
