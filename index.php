@@ -140,7 +140,7 @@ $GLOBALS['weather_description'] = array(
   "Braw",       // 32 - sunny
   "Awright",    // 33 - fair (night)
   "Awright",    // 34 - fair (day)
-  "Mental", 	  // 35 - mixed rain and hail
+  "Mental", 	// 35 - mixed rain and hail
   "Sweltrin'",  // 36 - hot
   "Hackit",     // 37 - isolated thunderstorms
   "Hackit",     // 38 - scattered thunderstorms
