@@ -98,7 +98,6 @@ function retrieve_taps_status($location){
 
 
 function _index($location='') {
-
   if (strpos($location,'?location=') !== false)
   {
     $data['location'] = str_replace('?location=', '', $location);;
@@ -123,7 +122,12 @@ function _index($location='') {
     $data['search'][]=View::do_fetch(VIEW_PATH.'search/index.php',$data);
     $data['moreinfo'][]=View::do_fetch(VIEW_PATH.'moreinfo/index.php', $data);
     $data['socialmedia'][]=View::do_fetch(VIEW_PATH.'socialmedia/index.php');
-    View::do_dump(VIEW_PATH.'taps-layout.php',$data);
+    if (strpos($location,'?api') !== false){
+      View::do_dump(VIEW_PATH.'taps-api.php',$data);
+    }
+    else{
+      View::do_dump(VIEW_PATH.'taps-layout.php',$data);
+    }
   }
 
 }
