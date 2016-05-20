@@ -39,6 +39,39 @@ function get_taps_status($temp_f, $weather_code){
   );
 }
 
+function build_forecast($forecast){
+  $f = [];
+  if(is_array($forecast)){
+    foreach ($forecast as $daycast){
+      $code = intval($daycast->code);
+      $weather_description = get_weather_description($code);
+      $datetime = $daycast->date;
+      $temp_high_f = intval($daycast->high);
+      $temp_low_f = intval($daycast->low);
+      $temp_high_c = f_to_c($temp_high_f);
+      $temp_low_c = f_to_c($temp_low_f);
+      $taps_status = get_taps_status($temp_high_f, $code);
+
+      array_push ($f, array(
+        'temp_high_f'      => $temp_high_f,
+        'temp_high_c'      => $temp_high_c,
+        'temp_low_f'      => $temp_low_f,
+        'temp_low_c'      => $temp_low_c,
+        'taps'        => $taps_status['status'],
+        'message'     => $taps_status['message'],
+        'description' => $weather_description,
+        'datetime'    => $datetime
+      ));
+    }
+  }
+
+  return $f;
+}
+
+function f_to_c($temp_f){
+  return round(($temp_f-32) * (5/9));
+}
+
 function retrieve_taps_status($location){
 
   $current_datetime = new DateTime();
@@ -79,7 +112,7 @@ function retrieve_taps_status($location){
     if (isset( $data->wind->chill ))
     {
       $temp_f = intval($data->wind->chill);
-      $temp_c = round(($temp_f-32) * (5/9));
+      $temp_c = f_to_c($temp_f);
     }
 
     // Generally the value of $location returned here is formatted nicer.
@@ -87,6 +120,14 @@ function retrieve_taps_status($location){
     $weather_code = intval($data->item->condition->code);
     $weather_description = get_weather_description($weather_code);
 
+    // Forecast
+    $forecast = [];
+    if (isset($data->item->forecast))
+    {
+      $forecast = build_forecast($data->item->forecast);
+    }
+
+    // The money-shot
     $taps_status = get_taps_status($temp_f, $weather_code);
 
     $json_local = json_encode (
@@ -98,11 +139,12 @@ function retrieve_taps_status($location){
                       'description' => $weather_description,
                       'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
                       'location'    => $location,
-                      'place_error' => (isset($place_error) ? $place_error : '')
+                      'place_error' => (isset($place_error) ? $place_error : ''),
+                      'forecast'    => $forecast
                     ));
 
     // Need to return as an object rather than an array.
-    // Doing foreach would be quicker, but this is neater.
+    // Doing for would be quicker, but this is neater.
     return json_decode( $json_local );
   } else return json_decode (
                   json_encode (
@@ -115,7 +157,8 @@ function retrieve_taps_status($location){
                       'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
                       'location'    => $GLOBALS['default_location'],
                       'place_error' => (isset($place_error)
-                                        ? $place_error : 'Can\'t find location')
+                                        ? $place_error : 'Can\'t find location'),
+                      'forecast'    => []
                     ))); // error - couldn't query internet
 }
 
