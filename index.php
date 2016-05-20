@@ -128,7 +128,7 @@ $GLOBALS['weather_description'] = array(
   "Misty",      // 20 - foggy
   "Misty",      // 21 - haze
   "Misty",      // 22 - smoky
-  "Blawy",      // 23 - blustery
+  "Blowy",      // 23 - blustery
   "Mental",     // 24 - windy
   "Baltic",     // 25 - cold
   "Awright",    // 26 - cloudy
