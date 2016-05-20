@@ -16,9 +16,18 @@ function retrieve_taps_status($location){
 
     if ($json_web->query->count == 0)
     {
-      $place_error = 'Location \''.$location.'\' unknown.';
-      $location = isset($_SESSION['location']) ? $_SESSION['location'] : $GLOBALS['default_location'];
-      $json_web = json_decode( @file_get_contents( build_query($location) ));
+      // Is this a failed api request? If so update location and return error
+      // otherwise attempt to load the last loaded location or default location
+      // via stashed cookie.
+      if(strpos($location,'?api') !== false){
+        $location = str_replace('?api&location=', '', $location);
+        $place_error = 'Location \''.$location.'\' unknown.';
+      }
+      else{
+        $place_error = 'Location \''.$location.'\' unknown.';
+        $location = isset($_SESSION['location']) ? $_SESSION['location'] : $GLOBALS['default_location'];
+        $json_web = json_decode( @file_get_contents( build_query($location) ));
+      }
     }
   }
 
@@ -91,16 +100,16 @@ function retrieve_taps_status($location){
                       'description' => '',
                       'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
                       'location'    => $GLOBALS['default_location'],
-                      'place_error' => 'Can\'t find location'
+                      'place_error' => (isset($place_error)
+                                        ? $place_error : 'Can\'t find location')
                     ))); // error - couldn't query internet
-
 }
 
 
 function _index($location='') {
   if (strpos($location,'?location=') !== false)
   {
-    $data['location'] = str_replace('?location=', '', $location);;
+    $data['location'] = str_replace('?location=', '', $location);
     View::do_dump(VIEW_PATH.'taps-redirect.php',$data);
   }
   else
