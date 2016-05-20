@@ -5,6 +5,40 @@ function build_query($location){
   return str_replace('LOCATION', urlencode($location), $GLOBALS['json_url']);
 }
 
+function get_weather_description($weather_code){
+  if($weather_code >= 0 &&
+      $weather_code < sizeof($GLOBALS['weather_description'])){
+    return $GLOBALS['weather_description'][$weather_code];
+  }
+  else{
+    return '';
+  }
+}
+
+function get_taps_status($temp_f, $weather_code){
+  $message = '';
+  $status = '';
+
+  if (in_array($weather_code, $GLOBALS['terrible_weather'])){
+    $status = 'oan';
+  }
+  else if ($temp_f > $GLOBALS['taps_temp']){
+    $status = 'aff';
+  }
+  else if ($temp_f > $GLOBALS['taps_temp'] - 5){
+    $status = 'oan';
+    $message = '...but only by a bawhair!';
+  }
+  else{
+    $status = 'oan';
+  }
+
+  return array(
+      'status'  => $status,
+      'message' => $message
+  );
+}
+
 function retrieve_taps_status($location){
 
   $current_datetime = new DateTime();
@@ -21,7 +55,7 @@ function retrieve_taps_status($location){
       // via stashed cookie.
       if(strpos($location,'?api') !== false){
         $location = str_replace('?api&location=', '', $location);
-        $place_error = 'Location \''.$location.'\' unknown.';
+        $place_error = $location;
       }
       else{
         $place_error = 'Location \''.$location.'\' unknown.';
@@ -48,39 +82,19 @@ function retrieve_taps_status($location){
       $temp_c = round(($temp_f-32) * (5/9));
     }
 
-    $status = '';
-    $message = '';
-    $weather_description = '';
+    // Generally the value of $location returned here is formatted nicer.
     $location = $data->location->city;
     $weather_code = intval($data->item->condition->code);
+    $weather_description = get_weather_description($weather_code);
 
-    /* Figure out taps status */
-    if (in_array($weather_code, $GLOBALS['terrible_weather'])){
-      $status = 'oan';
-    }
-    else if ($temp_f > $GLOBALS['taps_temp']){
-      $status = 'aff';
-    }
-    else if ($temp_f > $GLOBALS['taps_temp'] - 5){
-      $status = 'oan';
-      $message = "...but only by a bawhair!";
-    }
-    else{
-      $status = 'oan';
-    }
-
-    /* Check if there's a weather description */
-    if($weather_code >= 0 &&
-        $weather_code < sizeof($GLOBALS['weather_description'])){
-      $weather_description = $GLOBALS['weather_description'][$weather_code];
-    }
+    $taps_status = get_taps_status($temp_f, $weather_code);
 
     $json_local = json_encode (
                     array (
                       'temp_f'      => $temp_f,
                       'temp_c'      => $temp_c,
-                      'taps'        => $status,
-                      'message'     => $message,
+                      'taps'        => $taps_status['status'],
+                      'message'     => $taps_status['message'],
                       'description' => $weather_description,
                       'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
                       'location'    => $location,
