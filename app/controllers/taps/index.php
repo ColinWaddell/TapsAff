@@ -45,7 +45,7 @@ function build_forecast($forecast){
     foreach ($forecast as $daycast){
       $code = intval($daycast->code);
       $weather_description = get_weather_description($code);
-      $datetime = $daycast->date;
+      $datetime = date("Y-m-d",strtotime($daycast->date));
       $temp_high_f = intval($daycast->high);
       $temp_low_f = intval($daycast->low);
       $temp_high_c = f_to_c($temp_high_f);
