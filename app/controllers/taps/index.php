@@ -120,6 +120,10 @@ function retrieve_taps_status($location){
     $weather_code = intval($data->item->condition->code);
     $weather_description = get_weather_description($weather_code);
 
+    // Is it daytime
+    $daytime =  time() < strtotime($data->astronomy->sunset) &&
+                time() > strtotime($data->astronomy->sunrise);
+
     // Forecast
     $forecast = [];
     if (isset($data->item->forecast))
@@ -139,6 +143,7 @@ function retrieve_taps_status($location){
                       'description' => $weather_description,
                       'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
                       'location'    => $location,
+                      'daytime'     => $daytime,
                       'place_error' => (isset($place_error) ? $place_error : ''),
                       'forecast'    => $forecast
                     ));
