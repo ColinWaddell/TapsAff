@@ -53,10 +53,11 @@ function build_forecast($forecast){
       $taps_status = get_taps_status($temp_high_f, $code);
 
       array_push ($f, array(
-        'temp_high_f'      => $temp_high_f,
-        'temp_high_c'      => $temp_high_c,
-        'temp_low_f'      => $temp_low_f,
-        'temp_low_c'      => $temp_low_c,
+        'code'        => $code,
+        'temp_high_f' => $temp_high_f,
+        'temp_high_c' => $temp_high_c,
+        'temp_low_f'  => $temp_low_f,
+        'temp_low_c'  => $temp_low_c,
         'taps'        => $taps_status['status'],
         'message'     => $taps_status['message'],
         'description' => $weather_description,
