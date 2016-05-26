@@ -139,6 +139,7 @@ function retrieve_taps_status($location){
                     array (
                       'temp_f'      => $temp_f,
                       'temp_c'      => $temp_c,
+                      'code'        => $weather_code,
                       'taps'        => $taps_status['status'],
                       'message'     => $taps_status['message'],
                       'description' => $weather_description,
