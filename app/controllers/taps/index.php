@@ -73,6 +73,17 @@ function f_to_c($temp_f){
   return round(($temp_f-32) * (5/9));
 }
 
+function shortStrToTime($time){
+  /* times can come in malformed, ie 9:4 pm.
+     this should fix this and convert to time. */
+  $colonpos = strpos($time, ":");
+  if ($time[$colonpos+2]==" "){
+    //malformed. need to insert zero
+    $time=substr_replace($time, "0", $colonpos+2, 0);
+  }
+  return strtotime($time);
+}
+
 function retrieve_taps_status($location){
 
   $current_datetime = new DateTime();
@@ -121,9 +132,11 @@ function retrieve_taps_status($location){
     $weather_code = intval($data->item->condition->code);
     $weather_description = get_weather_description($weather_code);
 
+    $sunrise = shortStrToTime($data->astronomy->sunrise);
+    $sunset  = shortStrToTime($data->astronomy->sunset);
+
     // Is it daytime
-    $daytime =  time() < strtotime($data->astronomy->sunset) &&
-                time() > strtotime($data->astronomy->sunrise);
+    $daytime =  time() < $sunset && time() > $sunrise;
 
     // Forecast
     $forecast = [];
