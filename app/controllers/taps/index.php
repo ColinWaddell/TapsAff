@@ -77,9 +77,10 @@ function shortStrToTime($time){
   /* times can come in malformed, ie 9:4 pm.
      this should fix this and convert to time. */
   $colonpos = strpos($time, ":");
+
   if ($time[$colonpos+2]==" "){
     //malformed. need to insert zero
-    $time=substr_replace($time, "0", $colonpos+2, 0);
+    $time=substr_replace($time, "0", $colonpos+1, 0);
   }
   return strtotime($time);
 }
