@@ -5,3 +5,4 @@ taps.json
 .htaccess
 php_errors.log
 cache/
+public/maps
