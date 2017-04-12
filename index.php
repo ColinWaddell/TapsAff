@@ -6,9 +6,9 @@ ini_set('display_errors','On');
 error_reporting(E_ALL);
 
 //===============================================
-// mod_rewrite
+// For json requests 
 //===============================================
-//Please configure via .htaccess or httpd.conf
+ini_set('default_socket_timeout', 600);
 
 //===============================================
 // KISSMVC Settings (please configure)
