@@ -201,6 +201,29 @@ input#location{
  /*transition: background-color 100ms linear;*/
 /*}*/
 
+
+/* Maps */
+#maps{
+  background: white;
+}
+
+#maps img{
+  width: 100%;
+  border: 1px solid #EEE;
+}
+
+#maps .weather{
+  display: none;
+}
+
+#maps:active .clothing{
+  display: none;
+}
+
+#maps:active .weather{
+  display: block;
+}
+
 div#share p{
   font-size: 30px;
   font-weight: 300;

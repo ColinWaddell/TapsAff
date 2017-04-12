@@ -49,7 +49,7 @@ _gaq.push(["_trackPageview"]);
 
   <div id="main">
     <div class="container">
-      <div class="columns offset-by-two twelve alpha">
+      <div class="columns sixteen alpha omega">
           <?php
             if (isset($body) && is_array($body)):
               foreach ($body as $entry): ?>
@@ -63,6 +63,19 @@ _gaq.push(["_trackPageview"]);
     </div> <!-- container -->
   </div> <!-- maincontent -->
 
+  <div id="maps">
+    <div class="container">
+      <div class="offset-by-three columns ten alpha omega">
+        <div class="clothing">
+          <img src="public/maps/taps_clothing.png">
+        </div>
+        <div class="weather">
+          <img src="public/maps/taps_weather.png">
+        </div>
+      </div> 
+    </div> <!-- container -->
+  </div> <!-- maps -->
+  
   <div id="location-entry">
     <div class="container">
       <div class="columns offset-by-three ten alpha">
