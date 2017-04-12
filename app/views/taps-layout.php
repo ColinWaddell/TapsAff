@@ -27,7 +27,7 @@
   <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" id="taps-style"  href="<?php echo myUrl('public/css/taps.css?makeload',true)?>" type="text/css" media="all" />
+<link rel="stylesheet" id="taps-style"  href="<?php echo myUrl('public/css/taps.css?loadme',true)?>" type="text/css" media="all" />
 <link rel="stylesheet" id="skeleton-framework"  href="<?php echo myUrl('public/css/skeleton.css',true)?>" type="text/css" media="all" />
 
 <script type="text/javascript">
