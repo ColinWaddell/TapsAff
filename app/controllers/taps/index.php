@@ -177,8 +177,6 @@ function retrieve_taps_status($location){
       return json_decode( $json_local );
     } 
     else {
-      $retries = $retries - 1;
-
       if (!$retries){
         return json_decode (
                       json_encode (
@@ -196,6 +194,7 @@ function retrieve_taps_status($location){
                         ))); // error - couldn't query internet
       }
     }
+    $retries = $retries - 1;
   }// retries
 }
 

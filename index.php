@@ -15,11 +15,11 @@ ini_set('default_socket_timeout', 600);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 
-define('WEB_DOMAIN','http://localhost'); //with http:// and NO trailing slash pls// define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
-define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
+//define('WEB_DOMAIN','http://localhost'); //with http:// and NO trailing slash pls// define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
+//define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
 
-//define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
-//define('WEB_FOLDER','/'); //with trailing slash pls
+define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
+define('WEB_FOLDER','/'); //with trailing slash pls
 
 define('VIEW_PATH','app/views/'); //with trailing slash pls
 
