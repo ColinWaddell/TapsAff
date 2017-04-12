@@ -66,12 +66,11 @@ _gaq.push(["_trackPageview"]);
   <div id="maps">
     <div class="container">
       <div class="offset-by-three columns ten alpha omega">
-        <div class="clothing">
-          <img src="public/maps/taps_clothing.png">
-        </div>
-        <div class="weather">
-          <img src="public/maps/taps_weather.png">
-        </div>
+        <input type="checkbox" id="btnMaps"/>
+        <label class="btn" for="btnMaps">
+          <img src="public/maps/taps_clothing.png" id="map_clothing" />
+          <img src="public/maps/taps_weather.png" id="map_weather" />
+        </label>
       </div> 
     </div> <!-- container -->
   </div> <!-- maps -->

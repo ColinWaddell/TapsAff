@@ -207,21 +207,21 @@ input#location{
   background: white;
 }
 
+#btnMaps {
+  display: none;
+}
+
 #maps img{
   width: 100%;
   border: 1px solid #EEE;
 }
 
-#maps .weather{
+#map_weather{
   display: none;
 }
 
-#maps:active .clothing{
-  display: none;
-}
-
-#maps:active .weather{
-  display: block;
+#btnMaps:checked + label > img#map_clothing{
+  content: url(../maps/taps_weather.png);
 }
 
 div#share p{
