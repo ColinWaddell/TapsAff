@@ -195,6 +195,8 @@ function retrieve_taps_status($location){
                           'forecast'    => []
                         ))); // error - couldn't query internet
       }
+    }
+  }// retries
 }
 
 
