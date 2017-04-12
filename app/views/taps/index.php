@@ -20,7 +20,7 @@
     <?php endif; ?>
     </p>
 
-    <div id="share">
+    <div id="share" class="offset-by-three eleven columns alpha omega">
       <p>Share:
         <a target="_blank" class="social-media google" href="https://plusone.google.com/_/+1/confirm?hl=en&url=<?php echo urlencode(myUrl(urlencode($status->location),true)); ?>">Google</a>
         <a target="_blank" class="social-media facebook" href="http://www.facebook.com/share.php?u=<?php echo urlencode(myUrl(urlencode($status->location),true)); ?>">Facebook</a>
