@@ -28,7 +28,7 @@
       </p>
     </div>
 
-    <div class="offset-by-one ten columns alpha omega">
+    <div class="offset-by-three ten columns alpha omega">
       <p class="taps-definition">
         <span class="b">Taps-Aff (Scots Vernacular) </span>Literally "tops off."
         The removing of one's shirt in the event of warm weather, a phenomenon rarely seen in Glasgow.
