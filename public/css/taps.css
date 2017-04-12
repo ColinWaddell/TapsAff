@@ -216,6 +216,7 @@ input#location{
   border: 1px solid #EEE;
   margin-bottom: 20px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 #map_weather{
