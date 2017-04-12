@@ -15,11 +15,11 @@ ini_set('default_socket_timeout', 600);
 //===============================================
 define('APP_PATH','app/'); //with trailing slash pls
 
-// define('WEB_DOMAIN','http://localhost'); //with http:// and NO trailing slash pls// define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
-// define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
+define('WEB_DOMAIN','http://localhost'); //with http:// and NO trailing slash pls// define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
+define('WEB_FOLDER','/tapsaff/'); //with trailing slash pls
 
-define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
-define('WEB_FOLDER','/'); //with trailing slash pls
+//define('WEB_DOMAIN','http://www.taps-aff.co.uk'); //with http:// and NO trailing slash pls
+//define('WEB_FOLDER','/'); //with trailing slash pls
 
 define('VIEW_PATH','app/views/'); //with trailing slash pls
 
@@ -52,6 +52,7 @@ session_start();
 // Globals
 //===============================================
 $GLOBALS['sitename']='Taps-Aff or Taps-Oan?';
+$GLOBALS['retries'] = 3;
 $GLOBALS['json_local']=getcwd().'/taps.json';
 $GLOBALS['json_url']='https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text%3D%22LOCATION%2C%20uk%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys';
 $GLOBALS['json_cache_window']='-5 minutes';

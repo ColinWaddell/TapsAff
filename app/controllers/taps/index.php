@@ -89,98 +89,112 @@ function retrieve_taps_status($location){
 
   $current_datetime = new DateTime();
   $current_datetime->setTimezone(new DateTimeZone('Europe/London'));
-  $json_web = getJson_cache(build_query($location));
 
-  $location = urldecode($location);
-  if (isset( $json_web->query ) ){
+  // Used in case any weird errors pop up
+  // when attempting to retrieve data.
+  $retries = $GLOBALS['retries'];
 
-    if ($json_web->query->count == 0)
-    {
-      // Is this a failed api request? If so update location and return error
-      // otherwise attempt to load the last loaded location or default location
-      // via stashed cookie.
-      if(strpos($location,'?api') !== false){
-        $location = str_replace('?api&location=', '', $location);
-        $place_error = $location;
+  while($retries){
+    $json_web = getJson_cache(build_query($location));
+
+    $location = urldecode($location);
+    if (isset( $json_web->query ) ){
+      if ($json_web->query->count == 0)
+      {
+        // Is this a failed api request? If so update location and return error
+        // otherwise attempt to load the last loaded location or default location
+        // via stashed cookie.
+        if(strpos($location,'?api') !== false){
+          $location = str_replace('?api&location=', '', $location);
+          $place_error = $location;
+        }
+        else{
+          $place_error = 'Location \''.$location.'\' unknown.';
+          $location = isset($_SESSION['location']) ? $_SESSION['location'] : $GLOBALS['default_location'];
+          $json_web = json_decode( @file_get_contents( build_query($location) ));
+        }
       }
-      else{
-        $place_error = 'Location \''.$location.'\' unknown.';
-        $location = isset($_SESSION['location']) ? $_SESSION['location'] : $GLOBALS['default_location'];
-        $json_web = json_decode( @file_get_contents( build_query($location) ));
+    }
+
+    // Have to test json file was found ok
+    if (isset( $json_web->query) && !is_null($json_web->query->results))
+    {
+      $temp_f = 0;
+      $temp_c = 0;
+
+      if ( is_array($json_web->query->results->channel) )
+        $data = $json_web->query->results->channel[0];
+      else
+        $data = $json_web->query->results->channel;
+
+      if (isset( $data->wind->chill ))
+      {
+        $temp_f = intval($data->wind->chill);
+        $temp_c = f_to_c($temp_f);
       }
-    }
-  }
 
-  // Have to test json file was found ok
-  if (isset( $json_web->query) && !is_null($json_web->query->results))
-  {
-    $temp_f = 0;
-    $temp_c = 0;
+      // Generally the value of $location returned here is formatted nicer.
+      $location = $data->location->city;
+      $weather_code = intval($data->item->condition->code);
+      $weather_description = get_weather_description($weather_code);
 
-    if ( is_array($json_web->query->results->channel) )
-      $data = $json_web->query->results->channel[0];
-    else
-      $data = $json_web->query->results->channel;
+      $sunrise = shortStrToTime($data->astronomy->sunrise);
+      $sunset  = shortStrToTime($data->astronomy->sunset);
 
-    if (isset( $data->wind->chill ))
-    {
-      $temp_f = intval($data->wind->chill);
-      $temp_c = f_to_c($temp_f);
-    }
+      // Is it daytime
+      $daytime =  time() < $sunset && time() > $sunrise;
 
-    // Generally the value of $location returned here is formatted nicer.
-    $location = $data->location->city;
-    $weather_code = intval($data->item->condition->code);
-    $weather_description = get_weather_description($weather_code);
+      // Forecast
+      $forecast = [];
+      if (isset($data->item->forecast))
+      {
+        $forecast = build_forecast($data->item->forecast);
+      }
 
-    $sunrise = shortStrToTime($data->astronomy->sunrise);
-    $sunset  = shortStrToTime($data->astronomy->sunset);
+      // The money-shot
+      $taps_status = get_taps_status($temp_f, $weather_code);
 
-    // Is it daytime
-    $daytime =  time() < $sunset && time() > $sunrise;
+      $json_local = json_encode (
+                      array (
+                        'temp_f'      => $temp_f,
+                        'temp_c'      => $temp_c,
+                        'code'        => $weather_code,
+                        'taps'        => $taps_status['status'],
+                        'message'     => $taps_status['message'],
+                        'description' => $weather_description,
+                        'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
+                        'location'    => $location,
+                        'daytime'     => $daytime,
+                        'place_error' => (isset($place_error) ? $place_error : ''),
+                        'forecast'    => $forecast
+                      ));
 
-    // Forecast
-    $forecast = [];
-    if (isset($data->item->forecast))
-    {
-      $forecast = build_forecast($data->item->forecast);
-    }
+      // Everything went OK, no need to retry
+      $retries = 0;
 
-    // The money-shot
-    $taps_status = get_taps_status($temp_f, $weather_code);
+      // Need to return as an object rather than an array.
+      // Doing for would be quicker, but this is neater.
+      return json_decode( $json_local );
+    } 
+    else {
+      $retries = $retries - 1;
 
-    $json_local = json_encode (
-                    array (
-                      'temp_f'      => $temp_f,
-                      'temp_c'      => $temp_c,
-                      'code'        => $weather_code,
-                      'taps'        => $taps_status['status'],
-                      'message'     => $taps_status['message'],
-                      'description' => $weather_description,
-                      'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
-                      'location'    => $location,
-                      'daytime'     => $daytime,
-                      'place_error' => (isset($place_error) ? $place_error : ''),
-                      'forecast'    => $forecast
-                    ));
-
-    // Need to return as an object rather than an array.
-    // Doing for would be quicker, but this is neater.
-    return json_decode( $json_local );
-  } else return json_decode (
-                  json_encode (
-                    array (
-                      'temp_f'      => 0,
-                      'temp_c'      => 0,
-                      'taps'        => 'error',
-                      'message'     => '',
-                      'description' => '',
-                      'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
-                      'location'    => $GLOBALS['default_location'],
-                      'place_error' => (isset($place_error)
-                                        ? $place_error : 'Can\'t find location'),
-                      'forecast'    => []
-                    ))); // error - couldn't query internet
+      if (!$retries){
+        return json_decode (
+                      json_encode (
+                        array (
+                          'temp_f'      => 0,
+                          'temp_c'      => 0,
+                          'taps'        => 'error',
+                          'message'     => '',
+                          'description' => '',
+                          'datetime'    => $current_datetime->format('Y-m-d H:i:s'),
+                          'location'    => $GLOBALS['default_location'],
+                          'place_error' => (isset($place_error)
+                                            ? $place_error : 'Can\'t find location'),
+                          'forecast'    => []
+                        ))); // error - couldn't query internet
+      }
 }
 
 
