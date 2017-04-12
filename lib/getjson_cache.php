@@ -1,10 +1,10 @@
 <?php
 // Snippet from http://stackoverflow.com/questions/11407514/caching-json-output-in-php
-function getJson_cache($url) {
+function getJson_cache($url, $ignore_cache_read) {
     // cache files are created like cache/abcdef123456...
     $cacheFile = 'cache' . DIRECTORY_SEPARATOR . md5($url);
 
-    if (file_exists($cacheFile)) {
+    if (!$ignore_cache_read && file_exists($cacheFile)) {
         $fh = fopen($cacheFile, 'r');
         $cacheTime = trim(fgets($fh));
 
