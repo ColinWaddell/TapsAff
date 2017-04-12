@@ -97,6 +97,7 @@ function retrieve_taps_status($location){
   while($retries){
     $json_web = getJson_cache(build_query($location), $retries!=$GLOBALS['retries']);
 
+    $place_error = "";
     $location = urldecode($location);
     if (isset( $json_web->query ) ){
       if ($json_web->query->count == 0)

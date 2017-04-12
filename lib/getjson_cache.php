@@ -19,7 +19,6 @@ function getJson_cache($url, $ignore_cache_read) {
     }
 
     $json = file_get_contents( $url, false, stream_context_create($GLOBALS['sslContextOptions']) );
-
     $fh = fopen($cacheFile, 'w');
     fwrite($fh, time() . "\n");
     fwrite($fh, $json);
