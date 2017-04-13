@@ -65,7 +65,7 @@ _gaq.push(["_trackPageview"]);
 
   <div id="maps">
     <div class="container">
-      <div class="offset-by-three columns ten alpha omega">
+      <div class="offset-by-four columns eight alpha omega">
         <input type="checkbox" id="btnMaps"/>
         <label class="btn" for="btnMaps">
           <img src="public/maps/taps_clothing.png" id="map_clothing" />
@@ -94,7 +94,7 @@ _gaq.push(["_trackPageview"]);
   <div id="moreinfo">
 
     <div class="container">
-      <div class="columns offset-by-two twelve alpha omega">
+      <div class="columns sixteen alpha omega">
         <?php
           if (isset($moreinfo) && is_array($moreinfo)):
             foreach ($moreinfo as $entry): ?>

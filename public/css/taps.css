@@ -204,7 +204,9 @@ input#location{
 
 /* Maps */
 #maps{
-  background: white;
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 #btnMaps {
