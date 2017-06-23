@@ -126,10 +126,7 @@ _gaq.push(["_trackPageview"]);
     <div id="themessages"> 
       <div class="columns offset-by-six four alpha">
           <div class="message-button">
-            <a target="_blank" href="https://www.helters.com"><img src="public/img/helters.png" alt="" width="150" height="83" /></a> 
-          </div>
-          <div class="message-button">
-             <a target="_blank" href="http://www.gearbikes.com"><img src="public/img/gearbikes_badge.png" alt="Gear Bikes - Glasgow West-end Cycle Bike Store" width="150" height="150" /></a> 
+            <a target="_blank" href="http://www.ant-workshop.com/press/sheet.php?p=taps%20aff"><img src="public/img/tapsaffsim.png" alt="" width="150" height="260" /></a> 
           </div>
       </div>
     </div> <!-- store -->
